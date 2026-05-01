@@ -1,0 +1,39 @@
+[31muser 1/1:  1097758130 nicewebrl.utils - INFO - {'message': 'Ping 2522'}
+[0m[31muser 1/1:  1097758130 nicewebrl.utils - INFO - {'message': 'Ping 251'}
+[0m[31muser 1/1:  1097758130 nicewebrl.utils - INFO - {'message': 'Ping 7550'}
+[0m[31muser 1/1:  1097758130 nicewebrl.utils - INFO - {'message': 'Ping 9440'}
+[0m[31muser 1/1:  1097758130 nicewebrl.utils - INFO - {'message': 'Ping 3865'}
+[0m[31muser 1/1:  1097758130 nicewebrl.utils - INFO - {'message': 'Ping 303'}
+[0m[31muser 1/1:  1097758130 nicewebrl.utils - INFO - {'message': 'Ping 8180'}
+[0m[31muser 1/1:  1097758130 nicewebrl.utils - INFO - {'message': 'Ping 2981'}
+[0m[31muser 1/1:  1097758130 nicewebrl.utils - INFO - {'message': 'Ping 8501'}
+[0m[31muser 1/1:  1097758130 nicewebrl.utils - INFO - {'message': 'Ping 4931'}
+[0m[31muser 1/1:  1097758130 nicewebrl.utils - INFO - {'message': 'Ping 6504'}
+[0m[31muser 1/1:  1097758130 nicewebrl.utils - INFO - {'message': 'Ping 1754'}
+[0m[31muser 1/1:  1097758130 nicewebrl.utils - INFO - {'message': 'Ping 8723'}
+[0m[31muser 1/1:  2579103539 nicewebrl.utils - INFO - {'message': 'Ping 8387'}
+[0m[31muser 1/1:  958674891 nicewebrl.utils - INFO - {'message': 'Ping 2977'}
+[0m[31muser 1/1:  958674891 nicewebrl.utils - INFO - {'message': 'Ping 2767'}
+[0m[31muser 1/1:  958674891 |block 0: undefined| |stage 0: undefined| nicewebrl.experiment - INFO - Block order: ['block_3695a064171c48efafebe28a114a08b4']
+[0m[31muser 1/1:  958674891 |block 0: block_3695a064171c48efafebe28a114a08b4| |stage 0: play_oc_cec_v3_coord_ring_9_3c7f7db0| nicewebrl.stages - INFO - Getting latest stage state
+[0m[31muser 1/1:  958674891 |block 0: block_3695a064171c48efafebe28a114a08b4| |stage 0: play_oc_cec_v3_coord_ring_9_3c7f7db0| nicewebrl.stages - INFO - No stage play_oc_cec_v3_coord_ring_9_3c7f7db0 state found, starting new stage
+[0m[31muser 1/1:  958674891 |block 0: block_3695a064171c48efafebe28a114a08b4| |stage 0: play_oc_cec_v3_coord_ring_9_3c7f7db0| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  958674891 |block 0: block_3695a064171c48efafebe28a114a08b4| |stage 0: play_oc_cec_v3_coord_ring_9_3c7f7db0| nicewebrl.utils - INFO - {'message': 'Ping 3341'}
+[0m[31muser 1/1:  958674891 |block 0: block_3695a064171c48efafebe28a114a08b4| |stage 0: play_oc_cec_v3_coord_ring_9_3c7f7db0| nicewebrl.utils - INFO - {'message': 'Ping 4611'}
+[0m[31muser 1/1:  958674891 |block 0: block_3695a064171c48efafebe28a114a08b4| |stage 0: play_oc_cec_v3_coord_ring_9_3c7f7db0| nicewebrl.utils - INFO - {'message': 'Ping 640'}
+[0m[31muser 1/1:  319728038 nicewebrl.utils - INFO - {'message': 'Ping 1790'}
+[0m[31muser 1/1:  319728038 nicewebrl.utils - INFO - {'message': 'Ping 4394'}
+[0m[31muser 1/1:  319728038 |block 0: undefined| |stage 0: undefined| nicewebrl.experiment - INFO - Block order: ['block_dafc77c079094e52b8cdd0ca5fc431ee']
+[0m[31muser 1/1:  319728038 |block 0: block_dafc77c079094e52b8cdd0ca5fc431ee| |stage 0: play_oc_cec_v3_coord_ring_9_58cd2639| nicewebrl.stages - INFO - Getting latest stage state
+[0m[31muser 1/1:  319728038 |block 0: block_dafc77c079094e52b8cdd0ca5fc431ee| |stage 0: play_oc_cec_v3_coord_ring_9_58cd2639| nicewebrl.stages - INFO - No stage play_oc_cec_v3_coord_ring_9_58cd2639 state found, starting new stage
+[0m[31muser 1/1:  319728038 |block 0: block_dafc77c079094e52b8cdd0ca5fc431ee| |stage 0: play_oc_cec_v3_coord_ring_9_58cd2639| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  319728038 |block 0: block_dafc77c079094e52b8cdd0ca5fc431ee| |stage 0: play_oc_cec_v3_coord_ring_9_58cd2639| nicewebrl.utils - INFO - {'message': 'Ping 6789'}
+[0m[31muser 1/1:  319728038 |block 0: block_dafc77c079094e52b8cdd0ca5fc431ee| |stage 0: play_oc_cec_v3_coord_ring_9_58cd2639| nicewebrl.utils - INFO - {'message': 'Ping 212'}
+[0m[31muser 1/1:  319728038 |block 0: block_dafc77c079094e52b8cdd0ca5fc431ee| |stage 0: play_oc_cec_v3_coord_ring_9_58cd2639| nicewebrl.utils - INFO - {'message': 'Ping 674'}
+[0m[31muser 1/1:  319728038 |block 0: block_dafc77c079094e52b8cdd0ca5fc431ee| |stage 0: play_oc_cec_v3_coord_ring_9_58cd2639| nicewebrl.utils - INFO - {'message': 'Ping 2400'}
+[0m[31muser 1/1:  319728038 |block 0: block_dafc77c079094e52b8cdd0ca5fc431ee| |stage 0: play_oc_cec_v3_coord_ring_9_58cd2639| nicewebrl.stages - INFO - finished stage 'play_oc_cec_v3_coord_ring_9_58cd2639'. stats: {'nsteps': 256, 'nepisodes': 1, 'nsuccesses': 0}
+[0m[31muser 1/1:  319728038 |block 0: block_dafc77c079094e52b8cdd0ca5fc431ee| |stage 0: play_oc_cec_v3_coord_ring_9_58cd2639| nicewebrl.stages - INFO - finishing handle key press
+[0m[31muser 1/1:  319728038 |block 1: block_dafc77c079094e52b8cdd0ca5fc431ee| |stage 1: play_oc_cec_v3_coord_ring_9_58cd2639| nicewebrl.utils - INFO - {'message': 'Ping 4503'}
+[0m[31muser 1/1:  319728038 |block 1: block_dafc77c079094e52b8cdd0ca5fc431ee| |stage 1: play_oc_cec_v3_coord_ring_9_58cd2639| nicewebrl.utils - INFO - {'message': 'Ping 600'}
+[0m[31muser 1/1:  319728038 |block 1: block_dafc77c079094e52b8cdd0ca5fc431ee| |stage 1: play_oc_cec_v3_coord_ring_9_58cd2639| nicewebrl.utils - INFO - {'message': 'Ping 7181'}
+[0m
