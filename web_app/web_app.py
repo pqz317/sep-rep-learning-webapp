@@ -1,8 +1,7 @@
 """Main entry point for the Overcooked web app.
 
-Bypasses nicewebrl.run() to support dynamic model loading from the browser UI.
-The user selects a W&B tag (or run ID), layout, and agent ID, then plays
-the Overcooked game against the trained AI model.
+Fixed human-subjects experiment flow:
+  consent → demographics → instructions → tutorial → (env + survey) × 2 → finish
 
 Usage:
     python -m web_app.web_app
@@ -11,7 +10,9 @@ Usage:
 """
 
 import asyncio
+import concurrent.futures
 import os
+import random
 import sys
 
 # JAX 0.6.0 removed jax.tree_map; restore it for libraries that haven't migrated yet.
@@ -25,6 +26,15 @@ _jax_cache_dir = os.environ.get("JAX_COMPILATION_CACHE_DIR")
 if _jax_cache_dir:
     jax.config.update("jax_compilation_cache_dir", _jax_cache_dir)
     jax.config.update("jax_persistent_cache_min_compile_time_secs", 0)
+    if os.environ.get("JAX_EXPLAIN_CACHE_MISSES"):
+        jax.config.update("jax_explain_cache_misses", True)
+
+# Single-threaded executor for all JAX compilation work.
+# JAX's XLA backend is not thread-safe: concurrent jit/lower/compile calls
+# from multiple threads can race on shared global state.  Serialising every
+# run_in_executor call that touches JAX (build_env, load_model_checkpoint →
+# init_model_state → Flax init) through this executor prevents that.
+_compile_executor = concurrent.futures.ThreadPoolExecutor(max_workers=1)
 
 import aiofiles
 
@@ -42,16 +52,18 @@ from nicewebrl.logging import setup_logging, get_logger
 from nicewebrl.utils import get_user_lock, write_msgpack_record
 
 from web_app.experiment import (
-    setup_experiment,
-    AVAILABLE_ENVS,
-    DEFAULT_ENV_NAME,
-    get_available_layouts,
+    build_full_experiment,
+    build_instruction_block,
+    build_experiment_block,
+    build_env,
 )
-from web_app.model_loader import discover_agents_for_tag, discover_agents_for_run_id
+from web_app.constants import EXPERIMENT_LAYOUTS, EXPERIMENT_TAGS
 
 DATA_DIR = os.environ.get("DATA_DIR", "data")
 HOST = os.environ.get("HOST", "0.0.0.0")
 PORT = int(os.environ.get("PORT", 8080))
+# Number of timesteps per episode. Read by web_app/experiment.py at import time.
+EPISODE_TIMESTEPS = int(os.environ.get("EPISODE_TIMESTEPS", 200))
 
 logger = None
 
@@ -127,9 +139,6 @@ async def run_experiment_loop(experiment, stage_container: ui.element, episode_m
 
     # Game over — collect feedback and save data
     nicewebrl.clear_element(stage_container)
-    total_reward = app.storage.user.get("cumulative_reward", 0.0)
-    with stage_container:
-        ui.markdown(f"**Total Reward: {total_reward:.0f}**")
     await finish_experiment(stage_container, episode_metadata=episode_metadata, gameplay_file=gameplay_file)
 
 
@@ -145,27 +154,94 @@ async def handle_key_press(e, experiment, container):
         await fn()
 
 
+async def _handle_active_key(e, active_stage_ref: list, container):
+    """Key-press handler that forwards to whatever stage is currently active."""
+    stage = active_stage_ref[0]
+    if stage is None or stage.get_user_data("finished", False):
+        return
+    await stage.handle_key_press(e, container)
+    fn = stage.get_user_data("stage_completion_signal_from_event")
+    if fn:
+        await fn()
+
+
+async def _run_block_stages(
+    block, active_stage_ref: list, container, block_idx: int
+):
+    """Run all stages in a block sequentially. Returns the last gameplay_file (if any)."""
+    app.storage.user["block_name"] = block.name
+    app.storage.user["block_idx"] = block_idx
+    gameplay_file = None
+    while await block.not_finished():
+        stage = await block.get_stage()
+        active_stage_ref[0] = stage
+        nicewebrl.clear_element(container)
+        await run_stage(stage, container)
+        if isinstance(stage, nicewebrl_stages.EnvStage):
+            await stage.finish_saving_user_data()
+            gameplay_file = stage.user_save_file_fn()
+        await block.advance_stage()
+        app.storage.user["stage_idx"] = app.storage.user.get("stage_idx", -1) + 1
+    active_stage_ref[0] = None
+    return gameplay_file
+
+
+########################################
+# Pre-experiment screens
+########################################
+
+async def make_consent_form(container):
+    consent_given = asyncio.Event()
+    nicewebrl.clear_element(container)
+    with container:
+        ui.markdown("## Consent Form")
+        consent_path = os.path.join(project_root, "consent.md")
+        with open(consent_path, "r") as f:
+            ui.markdown(f.read())
+        ui.checkbox(
+            "I agree to participate.",
+            on_change=lambda: consent_given.set(),
+        )
+    await consent_given.wait()
+
+
+async def collect_demographic_info(container):
+    nicewebrl.clear_element(container)
+    with container:
+        ui.markdown("## About You")
+        ui.markdown("Please fill out the following before we begin.")
+
+        with ui.column().classes("w-full gap-4"):
+            prolific_input = ui.input("Prolific ID").classes("w-full")
+
+            ui.markdown(
+                '**"I have experience playing the game Overcooked."**'
+            )
+            experience_input = ui.radio(
+                ["Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"],
+                value="Neutral",
+            ).props("inline")
+
+        submitted = asyncio.Event()
+
+        async def submit():
+            prolific_id = prolific_input.value.strip()
+
+            if not prolific_id:
+                ui.notify("Please enter your Prolific ID.", type="warning")
+                return
+
+            app.storage.user["prolific_id"] = prolific_id
+            app.storage.user["overcooked_experience"] = experience_input.value
+            submitted.set()
+
+        ui.button("Continue", on_click=submit)
+        await submitted.wait()
+
+
 ########################################
 # Data collection helpers
 ########################################
-
-async def collect_user_info(container):
-    nicewebrl.clear_element(container)
-    with container:
-        ui.markdown("## Welcome")
-        ui.markdown("Please enter your name before starting.")
-        name_input = ui.input("Name").classes("w-full")
-
-        async def submit():
-            name = name_input.value.strip()
-            if not name:
-                ui.notify("Please enter your name.", type="warning")
-                return
-            app.storage.user["name"] = name
-
-        button = ui.button("Continue", on_click=submit)
-        await button.clicked()
-
 
 async def save_data(final_save=True, feedback=None, episode_metadata=None, gameplay_file=None, **kwargs):
     user_data_file = nicewebrl.user_data_file()
@@ -180,8 +256,6 @@ async def save_data(final_save=True, feedback=None, episode_metadata=None, gamep
         )
         async with aiofiles.open(user_data_file, "ab") as f:
             await write_msgpack_record(f, last_line)
-        # Also append the completion record to the per-episode gameplay file
-        # so feedback is directly associated with the episode it was given for.
         if gameplay_file:
             async with aiofiles.open(gameplay_file, "ab") as f:
                 await write_msgpack_record(f, last_line)
@@ -193,6 +267,9 @@ async def finish_experiment(container, episode_metadata=None, gameplay_file=None
     if app.storage.user.get("experiment_finished", False):
         with container:
             ui.markdown("## Data saved")
+            ui.markdown("### Your completion code:")
+            ui.markdown("### `TODO_COMPLETION_CODE`")
+            ui.markdown("#### You may now close this tab.")
             ui.button("Play Again", on_click=lambda: ui.navigate.to("/"))
         return
 
@@ -201,28 +278,28 @@ async def finish_experiment(container, episode_metadata=None, gameplay_file=None
         nicewebrl.clear_element(container)
         with container:
             ui.markdown("## Saving data. Please wait...")
-        await save_data(final_save=True, feedback=feedback, episode_metadata=episode_metadata, gameplay_file=gameplay_file)
+        await save_data(
+            final_save=True,
+            feedback=feedback,
+            episode_metadata=episode_metadata,
+            gameplay_file=gameplay_file,
+        )
         app.storage.user["data_saved"] = True
         nicewebrl.clear_element(container)
         with container:
-            ui.markdown("## Data saved")
-            ui.button("Play Again", on_click=lambda: ui.navigate.to("/"))
+            ui.markdown("## Experiment Complete")
+            ui.markdown("Thank you for participating!")
+            ui.markdown("### Your completion code:")
+            ui.markdown("### CWWOOUES")
+            ui.markdown("#### You may now close this tab.")
 
     app.storage.user["data_saved"] = app.storage.user.get("data_saved", False)
     if not app.storage.user["data_saved"]:
         with container:
             ui.markdown("## Session complete!")
-            if episode_metadata:
-                partner = episode_metadata.get("partner", "unknown")
-                layout = episode_metadata.get("layout", "unknown")
-                agent_id = episode_metadata.get("agent_id", "unknown")
-                total_reward = app.storage.user.get("cumulative_reward", 0.0)
-                ui.markdown(
-                    f"**Partner:** {partner} | **Layout:** {layout} | "
-                    f"**Agent:** {agent_id} | **Reward:** {total_reward:.0f}"
-                )
             ui.markdown(
-                "Please provide any feedback on this episode (e.g., issues, observations, suggestions)."
+                "Please provide any feedback on this session "
+                "(e.g., issues, observations, suggestions)."
             )
             text = ui.textarea().style("width: 80%;")
             button = ui.button("Submit")
@@ -236,6 +313,20 @@ async def finish_experiment(container, episode_metadata=None, gameplay_file=None
 
 @ui.page("/")
 async def index(client: Client):
+    # ui.add_body_html is embedded in the initial HTTP response template and is
+    # NOT sent via socket.io.  It must therefore be called before any await that
+    # causes NiceGUI to build and return the HTTP response (i.e. before
+    # client.connected(), which sets _waiting_for_connection and triggers the
+    # response to be sent).
+    basic_js_file = nicewebrl.basic_javascript_file()
+    with open(basic_js_file) as f:
+        ui.add_body_html("<script>" + f.read() + "</script>")
+
+    # Let NiceGUI complete its socket.io handshake before any heavy async work.
+    # Without this, awaiting db_ready before rendering any UI causes
+    # "implicit handshake failed" and a reload loop.
+    await client.connected()
+
     # Ensure the database is ready before doing anything
     try:
         await asyncio.wait_for(db_ready.wait(), timeout=10.0)
@@ -244,11 +335,6 @@ async def index(client: Client):
         return
 
     nicewebrl.initialize_user()
-
-    # Inject nicewebrl's JavaScript for keyboard handling
-    basic_js_file = nicewebrl.basic_javascript_file()
-    with open(basic_js_file) as f:
-        ui.add_body_html("<script>" + f.read() + "</script>")
 
     # Main card container
     card = (
@@ -267,183 +353,129 @@ async def index(client: Client):
         .props("tabindex=0")
     )
 
-    # Collect user name on every page load
-    await collect_user_info(card)
+    # ── Step 1: consent + demographics (once per user) ──────────────────────
+    if not app.storage.user.get("experiment_started"):
+        await make_consent_form(card)
+        await collect_demographic_info(card)
+        app.storage.user["experiment_started"] = True
+
+    # ── Step 2: session config (once per user, persists across page reloads) ─
+    if not app.storage.user.get("session_config_set"):
+        session_layout = random.choice(EXPERIMENT_LAYOUTS)
+        tags = list(EXPERIMENT_TAGS)
+        random.shuffle(tags)
+        tag_agent_pairs = [[t, random.randint(0, 7)] for t in tags]
+        app.storage.user["session_layout"] = session_layout
+        app.storage.user["session_tag_agent_pairs"] = tag_agent_pairs
+        app.storage.user["session_config_set"] = True
+    else:
+        session_layout = app.storage.user["session_layout"]
+        tag_agent_pairs = app.storage.user["session_tag_agent_pairs"]
+
+    # ── Step 3: build tutorial block + compile session layout (one loading screen)
     nicewebrl.clear_element(card)
-
     with card:
-        ui.markdown("## Overcooked: Play with Trained Models")
+        ui.markdown("## Loading…")
+        ui.markdown(
+            "Setting up the environments and loading AI models. "
+            "This may take a few minutes, please don't close this tab."
+        )
+        ui.spinner(size="lg")
 
-        # Configuration form
-        with ui.column().classes("w-full gap-4"):
-            env_select = ui.select(
-                label="Environment",
-                options=AVAILABLE_ENVS,
-                value=DEFAULT_ENV_NAME,
-            ).classes("w-full")
+    loop = asyncio.get_running_loop()
 
-            use_tag = ui.switch("Use W&B Tag (vs Run ID)", value=True)
+    def _build_tutorial_and_env():
+        env = build_env(session_layout, "overcooked")
+        block = build_instruction_block(session_layout, tutorial_agent_id=0, env_build=env)
+        return block, env
 
-            tag_input = ui.input(
-                "W&B Tag",
-                placeholder="e.g., cec_pred",
-            ).classes("w-full")
-
-            run_id_input = ui.input(
-                "W&B Run ID",
-                placeholder="e.g., abc123xy",
-            ).classes("w-full")
-            run_id_input.set_visibility(False)
-
-            def toggle_input_mode():
-                tag_input.set_visibility(use_tag.value)
-                run_id_input.set_visibility(not use_tag.value)
-
-            use_tag.on_value_change(lambda _: toggle_input_mode())
-
-            def update_layout_options():
-                env_name = env_select.value
-                layouts = get_available_layouts(env_name)
-                layout_select.options = layouts
-                if layout_select.value not in layouts:
-                    layout_select.value = layouts[0] if layouts else None
-                layout_select.update()
-
-            layout_select = ui.select(
-                label="Layout",
-                options=get_available_layouts(DEFAULT_ENV_NAME),
-                value=(get_available_layouts(DEFAULT_ENV_NAME)[0] if get_available_layouts(DEFAULT_ENV_NAME) else None),
-            ).classes("w-full")
-            env_select.on_value_change(lambda _: update_layout_options())
-
-            agent_select = ui.select(
-                label="AI Agent ID",
-                options=[0, 1],
-                value=0,
-            ).classes("w-full")
-
-            discover_status = ui.label("")
-            discover_button = ui.button("Discover Available Agents").classes("w-full")
-
-            async def on_discover():
-                """Resolve tag/run_id and populate agent dropdown with actual available agents."""
-                discover_button.disable()
-                discover_status.text = "Querying W&B and scanning checkpoints..."
-                try:
-                    loop = asyncio.get_running_loop()
-                    if use_tag.value:
-                        tag_val = tag_input.value.strip() if tag_input.value else ""
-                        if not tag_val:
-                            ui.notify("Enter a tag first.", type="warning")
-                            return
-                        _, agent_ids = await loop.run_in_executor(
-                            None, lambda: discover_agents_for_tag(tag_val)
-                        )
-                    else:
-                        rid_val = run_id_input.value.strip() if run_id_input.value else ""
-                        if not rid_val:
-                            ui.notify("Enter a run ID first.", type="warning")
-                            return
-                        _, agent_ids = await loop.run_in_executor(
-                            None, lambda: discover_agents_for_run_id(rid_val)
-                        )
-                    agent_select.options = agent_ids
-                    agent_select.value = agent_ids[0] if agent_ids else 0
-                    agent_select.update()
-                    discover_status.text = f"Found {len(agent_ids)} agents: {agent_ids}"
-                except Exception as e:
-                    discover_status.text = f"Error: {e}"
-                    ui.notify(f"Discovery failed: {e}", type="negative")
-                finally:
-                    discover_button.enable()
-
-            discover_button.on_click(lambda: asyncio.create_task(on_discover()))
-
-            status_label = ui.label("")
-            start_button = ui.button("Start Game").classes("w-full")
-
-        await start_button.clicked()
-
-        # Validate inputs
-        if use_tag.value:
-            tag_val = tag_input.value.strip() if tag_input.value else ""
-            run_id_val = None
-            if not tag_val:
-                ui.notify("Please enter a W&B tag.", type="warning")
-                return
-        else:
-            tag_val = None
-            run_id_val = run_id_input.value.strip() if run_id_input.value else ""
-            if not run_id_val:
-                ui.notify("Please enter a W&B run ID.", type="warning")
-                return
-
-        layout_val = layout_select.value
-        agent_id_val = agent_select.value
-        env_val = env_select.value
-
-        # Clear form and show loading
+    try:
+        instruction_block, session_env_build = await loop.run_in_executor(
+            _compile_executor, _build_tutorial_and_env
+        )
+    except Exception as e:
+        if client.id not in Client.instances:
+            return
         nicewebrl.clear_element(card)
         with card:
-            ui.markdown("## Loading...")
-            ui.markdown(
-                "Setting up environment and loading model. "
-                "This may take a few minutes on first run (JAX compilation)."
-            )
-            spinner = ui.spinner(size="lg")
+            ui.markdown("## Error loading models")
+            ui.markdown(f"`{e}`")
+            ui.button("Retry", on_click=lambda: ui.navigate.to("/"))
+        return
 
-        # Load model and set up experiment in a background thread
-        loop = asyncio.get_running_loop()
+    if client.id not in Client.instances:
+        return
+
+    # ── Step 4: reset per-session state and switch to game UI ────────────────
+    app.storage.user["current_step"] = 0
+    app.storage.user["cumulative_reward"] = 0.0
+    app.storage.user["experiment_finished"] = False
+    app.storage.user["data_saved"] = False
+    app.storage.user["stage_idx"] = 0
+    app.storage.user["block_idx"] = 0
+
+    nicewebrl.clear_element(card)
+    with card:
+        stage_container = ui.column()
+
+    episode_metadata = {
+        "session_layout": session_layout,
+        "tag_agent_pairs": tag_agent_pairs,
+        "prolific_id": app.storage.user.get("prolific_id"),
+    }
+
+    active_stage = [None]
+    ui.on(
+        "key_pressed",
+        lambda e: _handle_active_key(e, active_stage, stage_container),
+    )
+
+    # ── Step 5: run instruction/tutorial block ────────────────────────────────
+    gameplay_file = await _run_block_stages(
+        instruction_block, active_stage, stage_container, block_idx=0
+    )
+
+    # ── Step 6: build and run each experiment block with a per-block loading screen
+    for i, (tag, agent_id) in enumerate(tag_agent_pairs):
+        if client.id not in Client.instances:
+            return
+
+        nicewebrl.clear_element(stage_container)
+        with stage_container:
+            ui.markdown(f"## Loading round {i + 1}/{len(tag_agent_pairs)}…")
+            ui.markdown("Please don't close this tab.")
+            ui.spinner(size="lg")
+
         try:
-            setup_result = await loop.run_in_executor(
-                None,
-                lambda: setup_experiment(
-                    tag=tag_val,
-                    run_id=run_id_val,
-                    layout_name=layout_val,
-                    agent_id=agent_id_val,
-                    env_name=env_val,
+            block = await loop.run_in_executor(
+                _compile_executor,
+                lambda t=tag, a=agent_id, idx=i: build_experiment_block(
+                    idx, t, a, session_layout, env_build=session_env_build
                 ),
             )
         except Exception as e:
-            nicewebrl.clear_element(card)
-            with card:
-                ui.markdown("## Error")
-                ui.markdown(f"Failed to load model: `{e}`")
+            if client.id not in Client.instances:
+                return
+            nicewebrl.clear_element(stage_container)
+            with stage_container:
+                ui.markdown("## Error loading models")
+                ui.markdown(f"`{e}`")
                 ui.button("Retry", on_click=lambda: ui.navigate.to("/"))
             return
 
-        experiment = setup_result['experiment']
+        if client.id not in Client.instances:
+            return
 
-        # Reset per-game state
-        app.storage.user["current_step"] = 0
-        app.storage.user["cumulative_reward"] = 0.0
-        app.storage.user["experiment_finished"] = False
-        app.storage.user["data_saved"] = False
-        # Reset nicewebrl experiment progress indices (global keys, not namespaced)
-        app.storage.user["stage_idx"] = 0
-        app.storage.user["block_idx"] = 0
+        file = await _run_block_stages(
+            block, active_stage, stage_container, block_idx=i + 1
+        )
+        if file:
+            gameplay_file = file
 
-        # Switch to game UI
-        nicewebrl.clear_element(card)
-        with card:
-            meta_container = ui.column().style("align-items: center;")
-            with meta_container:
-                label_text = tag_val or run_id_val
-                setup_env = setup_result.get("env_name", env_val)
-                setup_layout = setup_result.get("layout_name", layout_val)
-                ui.markdown(
-                    f"**Env:** {setup_env} | **Playing:** {setup_layout} | **Model:** {label_text} | **AI Agent:** {agent_id_val}"
-                )
-                stage_container = ui.column()
-
-        episode_metadata = {
-            "partner": tag_val or run_id_val,
-            "layout": setup_result.get("layout_name", layout_val),
-            "agent_id": agent_id_val,
-            "env": setup_result.get("env_name", env_val),
-        }
-        await run_experiment_loop(experiment, stage_container, episode_metadata=episode_metadata)
+    nicewebrl.clear_element(stage_container)
+    await finish_experiment(
+        stage_container, episode_metadata=episode_metadata, gameplay_file=gameplay_file
+    )
 
 
 ########################################

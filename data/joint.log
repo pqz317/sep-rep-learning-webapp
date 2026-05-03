@@ -1,39 +1,1615 @@
-[31muser 1/1:  1097758130 nicewebrl.utils - INFO - {'message': 'Ping 2522'}
-[0m[31muser 1/1:  1097758130 nicewebrl.utils - INFO - {'message': 'Ping 251'}
-[0m[31muser 1/1:  1097758130 nicewebrl.utils - INFO - {'message': 'Ping 7550'}
-[0m[31muser 1/1:  1097758130 nicewebrl.utils - INFO - {'message': 'Ping 9440'}
-[0m[31muser 1/1:  1097758130 nicewebrl.utils - INFO - {'message': 'Ping 3865'}
-[0m[31muser 1/1:  1097758130 nicewebrl.utils - INFO - {'message': 'Ping 303'}
-[0m[31muser 1/1:  1097758130 nicewebrl.utils - INFO - {'message': 'Ping 8180'}
-[0m[31muser 1/1:  1097758130 nicewebrl.utils - INFO - {'message': 'Ping 2981'}
-[0m[31muser 1/1:  1097758130 nicewebrl.utils - INFO - {'message': 'Ping 8501'}
-[0m[31muser 1/1:  1097758130 nicewebrl.utils - INFO - {'message': 'Ping 4931'}
-[0m[31muser 1/1:  1097758130 nicewebrl.utils - INFO - {'message': 'Ping 6504'}
-[0m[31muser 1/1:  1097758130 nicewebrl.utils - INFO - {'message': 'Ping 1754'}
-[0m[31muser 1/1:  1097758130 nicewebrl.utils - INFO - {'message': 'Ping 8723'}
-[0m[31muser 1/1:  2579103539 nicewebrl.utils - INFO - {'message': 'Ping 8387'}
-[0m[31muser 1/1:  958674891 nicewebrl.utils - INFO - {'message': 'Ping 2977'}
-[0m[31muser 1/1:  958674891 nicewebrl.utils - INFO - {'message': 'Ping 2767'}
-[0m[31muser 1/1:  958674891 |block 0: undefined| |stage 0: undefined| nicewebrl.experiment - INFO - Block order: ['block_3695a064171c48efafebe28a114a08b4']
-[0m[31muser 1/1:  958674891 |block 0: block_3695a064171c48efafebe28a114a08b4| |stage 0: play_oc_cec_v3_coord_ring_9_3c7f7db0| nicewebrl.stages - INFO - Getting latest stage state
-[0m[31muser 1/1:  958674891 |block 0: block_3695a064171c48efafebe28a114a08b4| |stage 0: play_oc_cec_v3_coord_ring_9_3c7f7db0| nicewebrl.stages - INFO - No stage play_oc_cec_v3_coord_ring_9_3c7f7db0 state found, starting new stage
-[0m[31muser 1/1:  958674891 |block 0: block_3695a064171c48efafebe28a114a08b4| |stage 0: play_oc_cec_v3_coord_ring_9_3c7f7db0| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
-[0m[31muser 1/1:  958674891 |block 0: block_3695a064171c48efafebe28a114a08b4| |stage 0: play_oc_cec_v3_coord_ring_9_3c7f7db0| nicewebrl.utils - INFO - {'message': 'Ping 3341'}
-[0m[31muser 1/1:  958674891 |block 0: block_3695a064171c48efafebe28a114a08b4| |stage 0: play_oc_cec_v3_coord_ring_9_3c7f7db0| nicewebrl.utils - INFO - {'message': 'Ping 4611'}
-[0m[31muser 1/1:  958674891 |block 0: block_3695a064171c48efafebe28a114a08b4| |stage 0: play_oc_cec_v3_coord_ring_9_3c7f7db0| nicewebrl.utils - INFO - {'message': 'Ping 640'}
-[0m[31muser 1/1:  319728038 nicewebrl.utils - INFO - {'message': 'Ping 1790'}
-[0m[31muser 1/1:  319728038 nicewebrl.utils - INFO - {'message': 'Ping 4394'}
-[0m[31muser 1/1:  319728038 |block 0: undefined| |stage 0: undefined| nicewebrl.experiment - INFO - Block order: ['block_dafc77c079094e52b8cdd0ca5fc431ee']
-[0m[31muser 1/1:  319728038 |block 0: block_dafc77c079094e52b8cdd0ca5fc431ee| |stage 0: play_oc_cec_v3_coord_ring_9_58cd2639| nicewebrl.stages - INFO - Getting latest stage state
-[0m[31muser 1/1:  319728038 |block 0: block_dafc77c079094e52b8cdd0ca5fc431ee| |stage 0: play_oc_cec_v3_coord_ring_9_58cd2639| nicewebrl.stages - INFO - No stage play_oc_cec_v3_coord_ring_9_58cd2639 state found, starting new stage
-[0m[31muser 1/1:  319728038 |block 0: block_dafc77c079094e52b8cdd0ca5fc431ee| |stage 0: play_oc_cec_v3_coord_ring_9_58cd2639| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
-[0m[31muser 1/1:  319728038 |block 0: block_dafc77c079094e52b8cdd0ca5fc431ee| |stage 0: play_oc_cec_v3_coord_ring_9_58cd2639| nicewebrl.utils - INFO - {'message': 'Ping 6789'}
-[0m[31muser 1/1:  319728038 |block 0: block_dafc77c079094e52b8cdd0ca5fc431ee| |stage 0: play_oc_cec_v3_coord_ring_9_58cd2639| nicewebrl.utils - INFO - {'message': 'Ping 212'}
-[0m[31muser 1/1:  319728038 |block 0: block_dafc77c079094e52b8cdd0ca5fc431ee| |stage 0: play_oc_cec_v3_coord_ring_9_58cd2639| nicewebrl.utils - INFO - {'message': 'Ping 674'}
-[0m[31muser 1/1:  319728038 |block 0: block_dafc77c079094e52b8cdd0ca5fc431ee| |stage 0: play_oc_cec_v3_coord_ring_9_58cd2639| nicewebrl.utils - INFO - {'message': 'Ping 2400'}
-[0m[31muser 1/1:  319728038 |block 0: block_dafc77c079094e52b8cdd0ca5fc431ee| |stage 0: play_oc_cec_v3_coord_ring_9_58cd2639| nicewebrl.stages - INFO - finished stage 'play_oc_cec_v3_coord_ring_9_58cd2639'. stats: {'nsteps': 256, 'nepisodes': 1, 'nsuccesses': 0}
-[0m[31muser 1/1:  319728038 |block 0: block_dafc77c079094e52b8cdd0ca5fc431ee| |stage 0: play_oc_cec_v3_coord_ring_9_58cd2639| nicewebrl.stages - INFO - finishing handle key press
-[0m[31muser 1/1:  319728038 |block 1: block_dafc77c079094e52b8cdd0ca5fc431ee| |stage 1: play_oc_cec_v3_coord_ring_9_58cd2639| nicewebrl.utils - INFO - {'message': 'Ping 4503'}
-[0m[31muser 1/1:  319728038 |block 1: block_dafc77c079094e52b8cdd0ca5fc431ee| |stage 1: play_oc_cec_v3_coord_ring_9_58cd2639| nicewebrl.utils - INFO - {'message': 'Ping 600'}
-[0m[31muser 1/1:  319728038 |block 1: block_dafc77c079094e52b8cdd0ca5fc431ee| |stage 1: play_oc_cec_v3_coord_ring_9_58cd2639| nicewebrl.utils - INFO - {'message': 'Ping 7181'}
+[32muser 2/2:  536172659 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  374494025 |block 0: block_cd8dbfca74ae4db59027a42e6a072d9b| |stage 2: tutorial_oc_cecp_pred_1000_coord_ring_9_agent0| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  374494025 |block 0: block_143a4ade206a4a09a799ef948d966275| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 1192'}
+[0m[31muser 1/2:  374494025 |block 0: block_143a4ade206a4a09a799ef948d966275| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 4715'}
+[0m[31muser 1/2:  374494025 |block 0: block_143a4ade206a4a09a799ef948d966275| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 2743'}
+[0m[31muser 1/2:  374494025 |block 0: block_143a4ade206a4a09a799ef948d966275| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 5088'}
+[0m[31muser 1/2:  374494025 |block 0: block_143a4ade206a4a09a799ef948d966275| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 1546'}
+[0m[31muser 1/2:  374494025 |block 0: block_143a4ade206a4a09a799ef948d966275| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 4364'}
+[0m[31muser 1/2:  374494025 |block 0: block_143a4ade206a4a09a799ef948d966275| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 6104'}
+[0m[31muser 1/2:  374494025 |block 0: block_143a4ade206a4a09a799ef948d966275| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 8866'}
+[0m[31muser 1/2:  374494025 |block 0: block_143a4ade206a4a09a799ef948d966275| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 3218'}
+[0m[31muser 1/2:  374494025 |block 0: block_143a4ade206a4a09a799ef948d966275| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 680'}
+[0m[31muser 1/2:  374494025 |block 0: block_143a4ade206a4a09a799ef948d966275| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 1828'}
+[0m[31muser 1/2:  374494025 |block 0: block_143a4ade206a4a09a799ef948d966275| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 8068'}
+[0m[31muser 1/2:  374494025 |block 0: block_143a4ade206a4a09a799ef948d966275| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 5980'}
+[0m[31muser 1/2:  374494025 |block 0: block_143a4ade206a4a09a799ef948d966275| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 2274'}
+[0m[31muser 1/2:  374494025 |block 0: block_143a4ade206a4a09a799ef948d966275| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/3:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 8473'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2145'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 4407'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 6523'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 5671'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 7415'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 7575'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 1397'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 9512'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 5522'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 344'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 1483'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 4352'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 4751'}
+[0m[33muser 3/3:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/3:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 8294'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 3602'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 3333'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 8467'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 3825'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 6632'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 5443'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 7975'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 5865'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 8036'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 9081'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 8790'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 9796'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 6391'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 8576'}
+[0m[33muser 3/3:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/3:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 692'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 326'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 4405'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 5593'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 8454'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 6601'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 5647'}
+[0m[33muser 3/3:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/3:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 4743'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 9064'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2122'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 9950'}
+[0m[33muser 3/3:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/3:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 5413'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 5535'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 1500'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 8890'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 8171'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 9214'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 9584'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 8006'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 9367'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 9324'}
+[0m[33muser 3/3:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/3:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/3:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/3:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 4356'}
+[0m[33muser 3/3:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/3:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 7099'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2586'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 7623'}
+[0m[33muser 3/3:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 3832'}
+[0m[33muser 3/3:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[34muser 4/4:  1674430422 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[35muser 5/5:  4173006549 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/5:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/5:  374494025 |block 0: block_555ecd2e9f0f4befb91badee83f29eb4| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 598'}
+[0m[31muser 1/5:  374494025 |block 0: block_ec4ffdf7e18348c2a55a6a3aab754b43| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 5379'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 1939'}
+[0m[31muser 1/5:  374494025 |block 0: block_ec4ffdf7e18348c2a55a6a3aab754b43| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 8740'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2323'}
+[0m[31muser 1/5:  374494025 |block 0: block_ec4ffdf7e18348c2a55a6a3aab754b43| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/5:  374494025 |block 0: block_ec4ffdf7e18348c2a55a6a3aab754b43| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 6941'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 7117'}
+[0m[31muser 1/5:  374494025 |block 0: block_ec4ffdf7e18348c2a55a6a3aab754b43| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 9565'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 6300'}
+[0m[31muser 1/5:  374494025 |block 0: block_ec4ffdf7e18348c2a55a6a3aab754b43| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 6593'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 395'}
+[0m[31muser 1/5:  374494025 |block 0: block_ec4ffdf7e18348c2a55a6a3aab754b43| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 7430'}
+[0m[31muser 1/5:  374494025 |block 0: block_ec4ffdf7e18348c2a55a6a3aab754b43| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 9068'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 3620'}
+[0m[31muser 1/5:  374494025 |block 0: block_ec4ffdf7e18348c2a55a6a3aab754b43| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 8768'}
+[0m[31muser 1/5:  374494025 |block 0: block_ec4ffdf7e18348c2a55a6a3aab754b43| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 1014'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 9566'}
+[0m[31muser 1/5:  374494025 |block 0: block_ec4ffdf7e18348c2a55a6a3aab754b43| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 7076'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 3310'}
+[0m[31muser 1/5:  374494025 |block 0: block_ec4ffdf7e18348c2a55a6a3aab754b43| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 6259'}
+[0m[31muser 1/5:  374494025 |block 0: block_ec4ffdf7e18348c2a55a6a3aab754b43| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 2483'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2702'}
+[0m[31muser 1/5:  374494025 |block 0: block_ec4ffdf7e18348c2a55a6a3aab754b43| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 4759'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2662'}
+[0m[31muser 1/5:  374494025 |block 0: block_ec4ffdf7e18348c2a55a6a3aab754b43| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 8692'}
+[0m[31muser 1/5:  374494025 |block 0: block_ec4ffdf7e18348c2a55a6a3aab754b43| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 8135'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 900'}
+[0m[31muser 1/5:  374494025 |block 0: block_ec4ffdf7e18348c2a55a6a3aab754b43| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 4583'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2093'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2996'}
+[0m[31muser 1/5:  374494025 |block 0: block_ec4ffdf7e18348c2a55a6a3aab754b43| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 8978'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 9476'}
+[0m[31muser 1/5:  374494025 |block 0: block_ec4ffdf7e18348c2a55a6a3aab754b43| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 1701'}
+[0m[31muser 1/5:  374494025 |block 0: block_ec4ffdf7e18348c2a55a6a3aab754b43| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 4707'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2054'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 9948'}
+[0m[31muser 1/5:  374494025 |block 0: block_ec4ffdf7e18348c2a55a6a3aab754b43| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 6226'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2227'}
+[0m[31muser 1/5:  374494025 |block 0: block_ec4ffdf7e18348c2a55a6a3aab754b43| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 7837'}
+[0m[31muser 1/5:  374494025 |block 0: block_ec4ffdf7e18348c2a55a6a3aab754b43| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/5:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/5:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/5:  374494025 |block 0: block_ec4ffdf7e18348c2a55a6a3aab754b43| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/5:  374494025 |block 0: block_b3ac17682733492c8ef1031cf47556d1| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 4194'}
+[0m[31muser 1/5:  374494025 |block 0: block_b3ac17682733492c8ef1031cf47556d1| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 6378'}
+[0m[31muser 1/5:  374494025 |block 0: block_b3ac17682733492c8ef1031cf47556d1| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 3382'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 7666'}
+[0m[31muser 1/5:  374494025 |block 0: block_b3ac17682733492c8ef1031cf47556d1| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 7323'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 8544'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2886'}
+[0m[31muser 1/5:  374494025 |block 0: block_b3ac17682733492c8ef1031cf47556d1| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 3395'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2503'}
+[0m[31muser 1/5:  374494025 |block 0: block_b3ac17682733492c8ef1031cf47556d1| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 8099'}
+[0m[31muser 1/5:  374494025 |block 0: block_b3ac17682733492c8ef1031cf47556d1| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 677'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 9530'}
+[0m[31muser 1/5:  374494025 |block 0: block_b3ac17682733492c8ef1031cf47556d1| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 3428'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 4514'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2522'}
+[0m[31muser 1/5:  374494025 |block 0: block_b3ac17682733492c8ef1031cf47556d1| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 2097'}
+[0m[31muser 1/5:  374494025 |block 0: block_b3ac17682733492c8ef1031cf47556d1| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/5:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/5:  374494025 |block 0: block_fd3998da25b143048c26b311271026a5| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/5:  374494025 |block 0: block_fd3998da25b143048c26b311271026a5| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/5:  374494025 |block 0: block_9ff4665241664f6987354d995deac6c5| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/5:  374494025 |block 0: block_9ff4665241664f6987354d995deac6c5| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2828'}
+[0m[31muser 1/5:  374494025 |block 0: block_1a35569edbef49aba1759de0c0f1cf15| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/5:  374494025 |block 0: block_1a35569edbef49aba1759de0c0f1cf15| |stage 2: tutorial_oc_cecp_pred_1000_coord_ring_9_agent0| nicewebrl.stages - INFO - Getting latest stage state
+[0m[31muser 1/5:  374494025 |block 0: block_1a35569edbef49aba1759de0c0f1cf15| |stage 2: tutorial_oc_cecp_pred_1000_coord_ring_9_agent0| nicewebrl.stages - INFO - Loading stage tutorial_oc_cecp_pred_1000_coord_ring_9_agent0 state from memory
+[0m[31muser 1/5:  374494025 |block 0: block_1a35569edbef49aba1759de0c0f1cf15| |stage 2: tutorial_oc_cecp_pred_1000_coord_ring_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 1638'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 5935'}
+[0m[31muser 1/5:  374494025 |block 0: block_1a35569edbef49aba1759de0c0f1cf15| |stage 2: tutorial_oc_cecp_pred_1000_coord_ring_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 4444'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 395'}
+[0m[31muser 1/5:  374494025 |block 0: block_1a35569edbef49aba1759de0c0f1cf15| |stage 2: tutorial_oc_cecp_pred_1000_coord_ring_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 2929'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 8130'}
+[0m[31muser 1/5:  374494025 |block 0: block_1a35569edbef49aba1759de0c0f1cf15| |stage 2: tutorial_oc_cecp_pred_1000_coord_ring_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 7597'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2382'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2235'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 9664'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 5217'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2883'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 6068'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2627'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 6922'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 8157'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 6903'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 263'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 797'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 27'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 7322'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 345'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 8214'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 9952'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 9797'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 8402'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 5461'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 5871'}
+[0m[33muser 3/5:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/5:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 8482'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 4026'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2718'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 519'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 9974'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 3745'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 8217'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2008'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 5696'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 1353'}
+[0m[33muser 3/5:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/5:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/5:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/5:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/5:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/5:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 6495'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 4034'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 1133'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2580'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 5588'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 5548'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 1519'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 5080'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 6515'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 3358'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 6802'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 8683'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 4586'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 7956'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2889'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 7055'}
+[0m[33muser 3/5:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/5:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2933'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 6483'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 5015'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 7502'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 5565'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 5656'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 8791'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 5556'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 3093'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 171'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2163'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 3164'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2848'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 4652'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 4468'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 6661'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 1922'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 7491'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2001'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 7425'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 5482'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 7059'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 3998'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 6741'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 9134'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 2175'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 5807'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 8546'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 9979'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 8999'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 9895'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 8050'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 9560'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 5095'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 4526'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 1852'}
+[0m[33muser 3/5:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/5:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 5410'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 8130'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 3715'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 9894'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 4164'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 3053'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 5364'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 6658'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 6498'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 513'}
+[0m[33muser 3/5:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/5:  2790342392 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 8780'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 87'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 9596'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 4332'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 268'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 5743'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 3967'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 4861'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 7072'}
+[0m[33muser 3/5:  2790342392 nicewebrl.utils - INFO - {'message': 'Ping 7216'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4866'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4870'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1701'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5609'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 28'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3078'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8434'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2727'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2622'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8616'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4424'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4543'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4190'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7613'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7923'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5990'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3343'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1637'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5258'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3475'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7007'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 290'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9903'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8186'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 557'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7981'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4362'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7130'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7330'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8271'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9061'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6887'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7196'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5602'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 262'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4378'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8158'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2964'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9041'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7839'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5697'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9302'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1897'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1150'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9107'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1935'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7846'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6961'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1144'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7212'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 952'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9238'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4080'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9378'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1887'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 340'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5668'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1506'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1415'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7572'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 636'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9847'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5713'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9697'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1794'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1587'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2481'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7999'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6841'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2740'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3631'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9970'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5178'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8232'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1464'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 637'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6101'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2288'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9144'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2161'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4830'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9427'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9461'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2123'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 993'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5601'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 289'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4389'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4479'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6757'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2154'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2328'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7340'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2232'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9457'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1542'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5226'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 533'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2463'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6596'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1040'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1597'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8533'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4722'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8960'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5217'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2504'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 320'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4026'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6167'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1740'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2324'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 908'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3296'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2742'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8037'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7792'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1654'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7725'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4845'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9198'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8077'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2388'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4092'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4418'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5269'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2502'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9113'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9555'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7514'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1851'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6636'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2098'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8922'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5979'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8668'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 698'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3976'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1076'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4729'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7797'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7391'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3071'}
+[0m[31muser 1/1:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1479'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5586'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3424'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4601'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3951'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4831'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6936'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9398'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3279'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8016'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6004'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7082'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5053'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4619'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5409'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1945'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8418'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6346'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9703'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1783'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6852'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9040'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6629'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9060'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1986'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3049'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6188'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8214'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9521'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1187'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2980'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1061'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5586'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8640'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5082'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2787'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5633'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6402'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8574'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2444'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 209'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2943'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6087'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6553'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4588'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3513'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2480'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4211'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6979'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1524'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4611'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4363'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5281'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5076'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5917'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6308'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7377'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2285'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4098'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9603'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3568'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 262'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2092'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4578'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9838'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1357'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 681'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6599'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6910'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1431'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1957'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2696'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3047'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8995'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5472'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7482'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2823'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2768'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4559'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7884'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9412'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9304'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9644'}
+[0m[31muser 1/1:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7632'}
+[0m[32muser 2/2:  1845657948 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9471'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6900'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9283'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8587'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5498'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9367'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3696'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2543'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3424'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9710'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2538'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4379'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9346'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4373'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7147'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5330'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 855'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6777'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 323'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6875'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1413'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 505'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9856'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8012'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6879'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3121'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3166'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2502'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7889'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7002'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3767'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 738'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1210'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3158'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2504'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7596'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2252'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2556'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8857'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4393'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9909'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9030'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2520'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7877'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3067'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3427'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4889'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9510'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7550'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8777'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4608'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8641'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6507'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7905'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4445'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9846'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 185'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3415'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1810'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7632'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7453'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3799'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5936'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8444'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2660'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9186'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9109'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2842'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3257'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5926'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8198'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6261'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6861'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9370'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7835'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4578'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9879'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5878'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5465'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5588'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8720'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4536'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4766'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9407'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4288'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 674'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2454'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8517'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3026'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6311'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9838'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5605'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3976'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 898'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9183'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9698'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1575'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7008'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9264'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 63'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5027'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3207'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4407'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9996'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 275'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8846'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 747'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6416'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4004'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9064'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 465'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7406'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2476'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1028'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1678'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3662'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9892'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9407'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8675'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8496'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 481'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8078'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8276'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3176'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8947'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 602'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1813'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5695'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9467'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7884'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5485'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6022'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4423'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1035'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2855'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9100'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1357'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 504'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4051'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5791'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1977'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3488'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 939'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1247'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7888'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7432'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3960'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8114'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 620'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1837'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4053'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8985'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4589'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9553'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5940'}
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8280'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3756'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8163'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9440'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1037'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9848'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6778'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2589'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4600'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2896'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1616'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2630'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8511'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3202'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6100'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3133'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2539'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6451'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8750'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 537'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1647'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4847'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9668'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8112'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7223'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5161'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3789'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9268'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 373'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8287'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4271'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7277'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9323'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8218'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2120'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7905'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6610'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5971'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9806'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 201'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2123'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1825'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1030'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7988'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5294'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2707'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5621'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8374'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1013'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3944'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8895'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1670'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6770'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6264'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8141'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 101'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3213'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4418'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7489'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4617'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6394'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3283'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 764'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5987'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3550'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5575'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3553'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5588'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5232'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6756'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6764'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 489'}
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7073'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4891'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3199'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6026'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7940'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6808'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2122'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 391'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2722'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2923'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3558'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4895'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5720'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4220'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8891'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5227'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2958'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9270'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1997'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 612'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6211'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9922'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8302'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7184'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7151'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 654'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1652'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1685'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 716'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8365'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2483'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7962'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9993'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2116'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4342'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6186'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4986'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 859'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6560'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6964'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5429'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4254'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5438'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4743'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8526'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 425'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6224'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2224'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7915'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1251'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1930'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3857'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1399'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5241'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4513'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6881'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6553'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 483'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9421'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6066'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8580'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 538'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8901'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1619'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7528'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2733'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3035'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2929'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5915'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4051'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9178'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2998'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3909'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9096'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7933'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5812'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5729'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4403'}
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5283'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4187'}
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1234'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5180'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6760'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 34'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 578'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7759'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 244'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 873'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7544'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1460'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2231'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4863'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8519'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8391'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 496'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 9596'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8763'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4913'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6340'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7169'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 715'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1945'}
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3294'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3809'}
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5185'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7125'}
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2708'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1911'}
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1978'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1384'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4411'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6992'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7501'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 1041'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3652'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4639'}
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  1845657948 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 983'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6408'}
+[0m[32muser 2/2:  1845657948 nicewebrl.utils - INFO - {'message': 'Ping 8800'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3804'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 4642'}
+[0m[32muser 2/2:  1845657948 nicewebrl.utils - INFO - {'message': 'Ping 5649'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 7538'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 6278'}
+[0m[32muser 2/2:  1845657948 nicewebrl.utils - INFO - {'message': 'Ping 3435'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 8219'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 5793'}
+[0m[32muser 2/2:  1845657948 nicewebrl.utils - INFO - {'message': 'Ping 4310'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 2630'}
+[0m[31muser 1/2:  575043340 nicewebrl.utils - INFO - {'message': 'Ping 3873'}
+[0m[32muser 2/2:  1845657948 nicewebrl.utils - INFO - {'message': 'Ping 9249'}
+[0m[31muser 1/1:  1935245223 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  1935245223 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  3248933634 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 3506'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 2856'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 1542'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 4877'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 8087'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 6576'}
+[0m[32muser 2/2:  3248933634 nicegui - WARNING - Client has been deleted but is still being used. This is most likely a bug in your application code. See https://github.com/zauberzeug/nicegui/issues/3028 for more information.
+Stack (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/app/web_app/web_app.py", line 495, in <module>
+    main()
+  File "/app/web_app/web_app.py", line 485, in main
+    ui.run(
+  File "/usr/local/lib/python3.11/site-packages/nicegui/ui_run.py", line 310, in run
+    Server.instance.run()
+  File "/usr/local/lib/python3.11/site-packages/nicegui/server.py", line 45, in run
+    super().run(sockets=sockets)
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 75, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/_compat.py", line 30, in asyncio_run
+    return runner.run(main)
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "/usr/local/lib/python3.11/site-packages/nicegui/page.py", line 178, in wait_for_result
+    return await result
+  File "/app/web_app/web_app.py", line 331, in index
+    ui.card(align_items=["center"])
+  File "/usr/local/lib/python3.11/site-packages/nicegui/elements/card.py", line 28, in __init__
+    super().__init__('q-card')
+  File "/usr/local/lib/python3.11/site-packages/nicegui/elements/mixins/sortable_element.py", line 15, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.11/site-packages/nicegui/element.py", line 85, in __init__
+    client.outbox.enqueue_update(self)
+  File "/usr/local/lib/python3.11/site-packages/nicegui/outbox.py", line 65, in enqueue_update
+    self.client.check_existence()
+  File "/usr/local/lib/python3.11/site-packages/nicegui/client.py", line 441, in check_existence
+    helpers.warn_once('Client has been deleted but is still being used. '
+  File "/usr/local/lib/python3.11/site-packages/nicegui/helpers/warnings.py", line 9, in warn_once
+    log.warning(message, stack_info=stack_info)
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 6131'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 9342'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 1377'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 7837'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 4986'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 7636'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 1670'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 8708'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 6096'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 9427'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 7174'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 8049'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 5492'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 6815'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 7184'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 7258'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 5669'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 4312'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 8442'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 7811'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 5337'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 2130'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 6213'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 8857'}
+[0m[31muser 1/2:  1935245223 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1935245223 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  3248933634 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1935245223 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  3248933634 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1935245223 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 6552'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 7854'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 3627'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 9474'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 7019'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 9785'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 9404'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 852'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 2195'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 423'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 1284'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 5021'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 8148'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 6043'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 5614'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 3088'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 2593'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 429'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 4090'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 3008'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 5314'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 7305'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 8721'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 7115'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 3016'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 601'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 8548'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 9768'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 6597'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 5713'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 610'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 4606'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 6058'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 4079'}
+[0m[32muser 2/2:  3248933634 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 144'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 8319'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 7190'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 7775'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 8039'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 1625'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 8201'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 5094'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 2788'}
+[0m[31muser 1/2:  1935245223 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 3220'}
+[0m[31muser 1/2:  1935245223 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1935245223 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1935245223 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1935245223 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1935245223 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1935245223 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1935245223 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1935245223 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1935245223 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1935245223 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1935245223 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 9266'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 9184'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 6888'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 6480'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 2221'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 2973'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 7136'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 7870'}
+[0m[32muser 2/2:  3248933634 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 8060'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 3230'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 1315'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 4474'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 6068'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 4547'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 6123'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 1023'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 6485'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 4077'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 3907'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 9071'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 1274'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 2420'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 1424'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 6796'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 5973'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 2681'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 9395'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 128'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 3637'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 4740'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 8991'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 2632'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 3587'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 6649'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 8640'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 3526'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 7663'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 6556'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 5779'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 5864'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 9026'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 464'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 10'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 3206'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 9683'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 1783'}
+[0m[32muser 2/2:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 4003'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 3765'}
+[0m[31muser 1/2:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 6479'}
+[0m[31muser 1/2:  1935245223 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1935245223 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  3248933634 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/3:  2042287390 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/3:  2042287390 nicewebrl.utils - INFO - {'message': 'Ping 2098'}
+[0m[33muser 3/3:  2042287390 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/3:  2042287390 nicewebrl.utils - INFO - {'message': 'Ping 2927'}
+[0m[33muser 3/3:  2042287390 |block 0: block_7aceacc704d341bbbdd2ae9bca8977d7| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/3:  2042287390 |block 0: block_7aceacc704d341bbbdd2ae9bca8977d7| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Getting latest stage state
+[0m[33muser 3/3:  2042287390 |block 0: block_7aceacc704d341bbbdd2ae9bca8977d7| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - No stage tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0 state found, starting new stage
+[0m[33muser 3/3:  2042287390 |block 0: block_7aceacc704d341bbbdd2ae9bca8977d7| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 1606'}
+[0m[33muser 3/3:  2042287390 |block 0: block_7aceacc704d341bbbdd2ae9bca8977d7| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 2410'}
+[0m[33muser 3/3:  2042287390 |block 0: block_7aceacc704d341bbbdd2ae9bca8977d7| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 224'}
+[0m[31muser 1/3:  1935245223 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/3:  1935245223 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/3:  3248933634 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/3:  2042287390 |block 0: block_7aceacc704d341bbbdd2ae9bca8977d7| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 5871'}
+[0m[33muser 3/3:  2042287390 |block 0: block_7aceacc704d341bbbdd2ae9bca8977d7| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - finished stage 'tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0'. stats: {'nsteps': 200, 'nepisodes': 1, 'nsuccesses': 0}
+[0m[33muser 3/3:  2042287390 |block 0: block_7aceacc704d341bbbdd2ae9bca8977d7| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - finishing handle key press
+[0m[33muser 3/3:  2042287390 |block 1: block_78496369aafd4617843578b85236207e| |stage 4: exp0_mep_counter_circuit_9_agent3| nicewebrl.stages - INFO - Getting latest stage state
+[0m[33muser 3/3:  2042287390 |block 1: block_78496369aafd4617843578b85236207e| |stage 4: exp0_mep_counter_circuit_9_agent3| nicewebrl.stages - INFO - No stage exp0_mep_counter_circuit_9_agent3 state found, starting new stage
+[0m[31muser 1/3:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 7314'}
+[0m[31muser 1/3:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 9302'}
+[0m[32muser 2/3:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 6'}
+[0m[33muser 3/3:  2042287390 |block 1: block_78496369aafd4617843578b85236207e| |stage 4: exp0_mep_counter_circuit_9_agent3| nicewebrl.utils - INFO - {'message': 'Ping 7313'}
+[0m[31muser 1/3:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 9784'}
+[0m[31muser 1/3:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 2889'}
+[0m[32muser 2/3:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 5092'}
+[0m[33muser 3/3:  2042287390 |block 1: block_78496369aafd4617843578b85236207e| |stage 4: exp0_mep_counter_circuit_9_agent3| nicewebrl.utils - INFO - {'message': 'Ping 7773'}
+[0m[31muser 1/3:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 1529'}
+[0m[31muser 1/3:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 933'}
+[0m[32muser 2/3:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 4246'}
+[0m[33muser 3/3:  2042287390 |block 1: block_78496369aafd4617843578b85236207e| |stage 4: exp0_mep_counter_circuit_9_agent3| nicewebrl.utils - INFO - {'message': 'Ping 7241'}
+[0m[31muser 1/3:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 6969'}
+[0m[31muser 1/3:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 8325'}
+[0m[32muser 2/3:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 8688'}
+[0m[33muser 3/3:  2042287390 |block 1: block_78496369aafd4617843578b85236207e| |stage 4: exp0_mep_counter_circuit_9_agent3| nicewebrl.utils - INFO - {'message': 'Ping 4039'}
+[0m[31muser 1/3:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 3172'}
+[0m[31muser 1/3:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 1687'}
+[0m[32muser 2/3:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 6020'}
+[0m[33muser 3/3:  2042287390 |block 1: block_78496369aafd4617843578b85236207e| |stage 4: exp0_mep_counter_circuit_9_agent3| nicewebrl.utils - INFO - {'message': 'Ping 3351'}
+[0m[31muser 1/3:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 997'}
+[0m[31muser 1/3:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 3628'}
+[0m[32muser 2/3:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 9504'}
+[0m[33muser 3/3:  2042287390 |block 1: block_78496369aafd4617843578b85236207e| |stage 4: exp0_mep_counter_circuit_9_agent3| nicewebrl.utils - INFO - {'message': 'Ping 7537'}
+[0m[32muser 2/3:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 3642'}
+[0m[33muser 3/3:  2042287390 |block 1: block_78496369aafd4617843578b85236207e| |stage 4: exp0_mep_counter_circuit_9_agent3| nicewebrl.utils - INFO - {'message': 'Ping 5315'}
+[0m[32muser 2/3:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 7121'}
+[0m[31muser 1/3:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 8502'}
+[0m[31muser 1/3:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 4586'}
+[0m[33muser 3/3:  2042287390 |block 1: block_78496369aafd4617843578b85236207e| |stage 4: exp0_mep_counter_circuit_9_agent3| nicewebrl.utils - INFO - {'message': 'Ping 963'}
+[0m[33muser 3/3:  2042287390 |block 1: block_78496369aafd4617843578b85236207e| |stage 4: exp0_mep_counter_circuit_9_agent3| nicewebrl.stages - INFO - finished stage 'exp0_mep_counter_circuit_9_agent3'. stats: {'nsteps': 200, 'nepisodes': 1, 'nsuccesses': 0}
+[0m[33muser 3/3:  2042287390 |block 1: block_78496369aafd4617843578b85236207e| |stage 4: exp0_mep_counter_circuit_9_agent3| nicewebrl.stages - INFO - finishing handle key press
+[0m[32muser 2/3:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 905'}
+[0m[33muser 3/3:  2042287390 |block 1: block_78496369aafd4617843578b85236207e| |stage 5: mep Survey| nicewebrl.utils - INFO - {'message': 'Ping 9018'}
+[0m[33muser 3/3:  2042287390 |block 2: block_56e25e6d737b4bcb9f2719874ccd3240| |stage 6: exp1_oc_cec_v3_counter_circuit_9_agent2| nicewebrl.stages - INFO - Getting latest stage state
+[0m[33muser 3/3:  2042287390 |block 2: block_56e25e6d737b4bcb9f2719874ccd3240| |stage 6: exp1_oc_cec_v3_counter_circuit_9_agent2| nicewebrl.stages - INFO - No stage exp1_oc_cec_v3_counter_circuit_9_agent2 state found, starting new stage
+[0m[31muser 1/3:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 7425'}
+[0m[31muser 1/3:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 7491'}
+[0m[32muser 2/3:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 4345'}
+[0m[33muser 3/3:  2042287390 |block 2: block_56e25e6d737b4bcb9f2719874ccd3240| |stage 6: exp1_oc_cec_v3_counter_circuit_9_agent2| nicewebrl.utils - INFO - {'message': 'Ping 9500'}
+[0m[32muser 2/3:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 1681'}
+[0m[33muser 3/3:  2042287390 |block 2: block_56e25e6d737b4bcb9f2719874ccd3240| |stage 6: exp1_oc_cec_v3_counter_circuit_9_agent2| nicewebrl.utils - INFO - {'message': 'Ping 8878'}
+[0m[31muser 1/3:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 9161'}
+[0m[31muser 1/3:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 2647'}
+[0m[32muser 2/3:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 6490'}
+[0m[33muser 3/3:  2042287390 |block 2: block_56e25e6d737b4bcb9f2719874ccd3240| |stage 6: exp1_oc_cec_v3_counter_circuit_9_agent2| nicewebrl.utils - INFO - {'message': 'Ping 2829'}
+[0m[32muser 2/3:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 4139'}
+[0m[33muser 3/3:  2042287390 |block 2: block_56e25e6d737b4bcb9f2719874ccd3240| |stage 6: exp1_oc_cec_v3_counter_circuit_9_agent2| nicewebrl.utils - INFO - {'message': 'Ping 6210'}
+[0m[31muser 1/3:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 1777'}
+[0m[31muser 1/3:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 9101'}
+[0m[32muser 2/3:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 3750'}
+[0m[33muser 3/3:  2042287390 |block 2: block_56e25e6d737b4bcb9f2719874ccd3240| |stage 6: exp1_oc_cec_v3_counter_circuit_9_agent2| nicewebrl.utils - INFO - {'message': 'Ping 7988'}
+[0m[33muser 3/3:  2042287390 |block 2: block_56e25e6d737b4bcb9f2719874ccd3240| |stage 6: exp1_oc_cec_v3_counter_circuit_9_agent2| nicewebrl.stages - INFO - finished stage 'exp1_oc_cec_v3_counter_circuit_9_agent2'. stats: {'nsteps': 200, 'nepisodes': 1, 'nsuccesses': 0}
+[0m[33muser 3/3:  2042287390 |block 2: block_56e25e6d737b4bcb9f2719874ccd3240| |stage 6: exp1_oc_cec_v3_counter_circuit_9_agent2| nicewebrl.stages - INFO - finishing handle key press
+[0m[32muser 2/3:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 3614'}
+[0m[33muser 3/3:  2042287390 |block 2: block_56e25e6d737b4bcb9f2719874ccd3240| |stage 7: oc_cec_v3 Survey| nicewebrl.utils - INFO - {'message': 'Ping 3241'}
+[0m[33muser 3/3:  2042287390 |block 3: block_6c64288a8045407c98ff5c40bab8923f| |stage 8: exp2_fcp_counter_circuit_9_agent3| nicewebrl.stages - INFO - Getting latest stage state
+[0m[33muser 3/3:  2042287390 |block 3: block_6c64288a8045407c98ff5c40bab8923f| |stage 8: exp2_fcp_counter_circuit_9_agent3| nicewebrl.stages - INFO - No stage exp2_fcp_counter_circuit_9_agent3 state found, starting new stage
+[0m[31muser 1/3:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 2159'}
+[0m[31muser 1/3:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 6879'}
+[0m[32muser 2/3:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 5947'}
+[0m[33muser 3/3:  2042287390 |block 3: block_6c64288a8045407c98ff5c40bab8923f| |stage 8: exp2_fcp_counter_circuit_9_agent3| nicewebrl.utils - INFO - {'message': 'Ping 3714'}
+[0m[32muser 2/3:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 3965'}
+[0m[33muser 3/3:  2042287390 |block 3: block_6c64288a8045407c98ff5c40bab8923f| |stage 8: exp2_fcp_counter_circuit_9_agent3| nicewebrl.utils - INFO - {'message': 'Ping 773'}
+[0m[34muser 4/4:  2585747086 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/4:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 5584'}
+[0m[31muser 1/4:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 1710'}
+[0m[33muser 3/4:  2042287390 |block 3: block_6c64288a8045407c98ff5c40bab8923f| |stage 8: exp2_fcp_counter_circuit_9_agent3| nicewebrl.utils - INFO - {'message': 'Ping 591'}
+[0m[32muser 2/4:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 5707'}
+[0m[35muser 5/5:  4025360097 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[33muser 3/5:  2042287390 |block 3: block_6c64288a8045407c98ff5c40bab8923f| |stage 8: exp2_fcp_counter_circuit_9_agent3| nicewebrl.utils - INFO - {'message': 'Ping 6997'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 3983'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 4595'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 3696'}
+[0m[33muser 3/5:  2042287390 |block 3: block_6c64288a8045407c98ff5c40bab8923f| |stage 8: exp2_fcp_counter_circuit_9_agent3| nicewebrl.utils - INFO - {'message': 'Ping 2954'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 7557'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 6848'}
+[0m[33muser 3/5:  2042287390 |block 3: block_6c64288a8045407c98ff5c40bab8923f| |stage 8: exp2_fcp_counter_circuit_9_agent3| nicewebrl.utils - INFO - {'message': 'Ping 9693'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 9307'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 4787'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 6872'}
+[0m[33muser 3/5:  2042287390 |block 3: block_6c64288a8045407c98ff5c40bab8923f| |stage 8: exp2_fcp_counter_circuit_9_agent3| nicewebrl.utils - INFO - {'message': 'Ping 6520'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 1514'}
+[0m[33muser 3/5:  2042287390 |block 3: block_6c64288a8045407c98ff5c40bab8923f| |stage 8: exp2_fcp_counter_circuit_9_agent3| nicewebrl.utils - INFO - {'message': 'Ping 7481'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 2332'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 232'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 2533'}
+[0m[33muser 3/5:  2042287390 |block 3: block_6c64288a8045407c98ff5c40bab8923f| |stage 8: exp2_fcp_counter_circuit_9_agent3| nicewebrl.utils - INFO - {'message': 'Ping 1796'}
+[0m[33muser 3/5:  2042287390 |block 3: block_6c64288a8045407c98ff5c40bab8923f| |stage 8: exp2_fcp_counter_circuit_9_agent3| nicewebrl.stages - INFO - finished stage 'exp2_fcp_counter_circuit_9_agent3'. stats: {'nsteps': 200, 'nepisodes': 1, 'nsuccesses': 0}
+[0m[33muser 3/5:  2042287390 |block 3: block_6c64288a8045407c98ff5c40bab8923f| |stage 8: exp2_fcp_counter_circuit_9_agent3| nicewebrl.stages - INFO - finishing handle key press
+[0m[33muser 3/5:  2042287390 |block 4: block_045fa133d4e54c3ab37a08aa42f5073e| |stage 10: exp3_oc_cecp_pred_1000_counter_circuit_9_agent4| nicewebrl.stages - INFO - Getting latest stage state
+[0m[33muser 3/5:  2042287390 |block 4: block_045fa133d4e54c3ab37a08aa42f5073e| |stage 10: exp3_oc_cecp_pred_1000_counter_circuit_9_agent4| nicewebrl.stages - INFO - No stage exp3_oc_cecp_pred_1000_counter_circuit_9_agent4 state found, starting new stage
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 3176'}
+[0m[33muser 3/5:  2042287390 |block 4: block_045fa133d4e54c3ab37a08aa42f5073e| |stage 10: exp3_oc_cecp_pred_1000_counter_circuit_9_agent4| nicewebrl.utils - INFO - {'message': 'Ping 4804'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 8098'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 5890'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 3508'}
+[0m[33muser 3/5:  2042287390 |block 4: block_045fa133d4e54c3ab37a08aa42f5073e| |stage 10: exp3_oc_cecp_pred_1000_counter_circuit_9_agent4| nicewebrl.utils - INFO - {'message': 'Ping 5155'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 4981'}
+[0m[33muser 3/5:  2042287390 |block 4: block_045fa133d4e54c3ab37a08aa42f5073e| |stage 10: exp3_oc_cecp_pred_1000_counter_circuit_9_agent4| nicewebrl.utils - INFO - {'message': 'Ping 932'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 3091'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 1905'}
+[0m[33muser 3/5:  2042287390 |block 4: block_045fa133d4e54c3ab37a08aa42f5073e| |stage 10: exp3_oc_cecp_pred_1000_counter_circuit_9_agent4| nicewebrl.utils - INFO - {'message': 'Ping 1937'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 595'}
+[0m[33muser 3/5:  2042287390 |block 4: block_045fa133d4e54c3ab37a08aa42f5073e| |stage 10: exp3_oc_cecp_pred_1000_counter_circuit_9_agent4| nicewebrl.utils - INFO - {'message': 'Ping 2324'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 9802'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 2472'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 8721'}
+[0m[33muser 3/5:  2042287390 |block 4: block_045fa133d4e54c3ab37a08aa42f5073e| |stage 10: exp3_oc_cecp_pred_1000_counter_circuit_9_agent4| nicewebrl.utils - INFO - {'message': 'Ping 2259'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 8243'}
+[0m[33muser 3/5:  2042287390 |block 4: block_045fa133d4e54c3ab37a08aa42f5073e| |stage 10: exp3_oc_cecp_pred_1000_counter_circuit_9_agent4| nicewebrl.stages - INFO - finished stage 'exp3_oc_cecp_pred_1000_counter_circuit_9_agent4'. stats: {'nsteps': 200, 'nepisodes': 1, 'nsuccesses': 0}
+[0m[33muser 3/5:  2042287390 |block 4: block_045fa133d4e54c3ab37a08aa42f5073e| |stage 10: exp3_oc_cecp_pred_1000_counter_circuit_9_agent4| nicewebrl.stages - INFO - finishing handle key press
+[0m[33muser 3/5:  2042287390 |block 4: block_045fa133d4e54c3ab37a08aa42f5073e| |stage 12: oc_cecp_pred_1000 Survey| nicewebrl.utils - INFO - {'message': 'Ping 3606'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 9399'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 8403'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 8665'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 948'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 1611'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 1838'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 5161'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 2225'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 4434'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 9349'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 9663'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 9522'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 6519'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 1934'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 9320'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 1739'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 187'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 5519'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 9356'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 451'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 9321'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 4541'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 4562'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 2404'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 3314'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 7608'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 9894'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 5207'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 955'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 767'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 6006'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 9124'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 5740'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 1199'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 149'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 8101'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 2802'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 5275'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 6648'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 8048'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 7692'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 5613'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 5031'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 3776'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 5245'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 8215'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 3310'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 168'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 1804'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 5794'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 9213'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 9495'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 4008'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 1035'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 1946'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 6403'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 8693'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 3513'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 7125'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 3698'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 2206'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 1078'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 4943'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 6620'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 7654'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 9831'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 1912'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 9464'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 4023'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 8763'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 5292'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 4367'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 9011'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 4994'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 5554'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 7482'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 8408'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 7229'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 9862'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 6626'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 8438'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 3648'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 6828'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 1427'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 8858'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 745'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 3671'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 6183'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 3459'}
+[0m[32muser 2/5:  3248933634 nicewebrl.utils - INFO - {'message': 'Ping 3433'}
+[0m[31muser 1/5:  1935245223 nicewebrl.utils - INFO - {'message': 'Ping 6233'}
+[0m[31muser 1/1:  3818807277 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  764211875 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  3818807277 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  3818807277 nicewebrl.utils - INFO - {'message': 'Ping 8286'}
+[0m[31muser 1/2:  3818807277 nicewebrl.utils - INFO - {'message': 'Ping 1468'}
+[0m[32muser 2/2:  764211875 nicewebrl.utils - INFO - {'message': 'Ping 4708'}
+[0m[32muser 2/2:  764211875 nicewebrl.utils - INFO - {'message': 'Ping 1130'}
+[0m[31muser 1/2:  3818807277 nicewebrl.utils - INFO - {'message': 'Ping 7150'}
+[0m[31muser 1/2:  3818807277 nicewebrl.utils - INFO - {'message': 'Ping 5607'}
+[0m[32muser 2/2:  764211875 nicewebrl.utils - INFO - {'message': 'Ping 8870'}
+[0m[31muser 1/2:  3818807277 nicewebrl.utils - INFO - {'message': 'Ping 1107'}
+[0m[31muser 1/2:  3818807277 nicewebrl.utils - INFO - {'message': 'Ping 8721'}
+[0m[32muser 2/2:  764211875 nicewebrl.utils - INFO - {'message': 'Ping 1481'}
+[0m[31muser 1/2:  3818807277 nicewebrl.utils - INFO - {'message': 'Ping 1626'}
+[0m[31muser 1/2:  3818807277 nicewebrl.utils - INFO - {'message': 'Ping 9043'}
+[0m[31muser 1/1:  2600381116 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  2600381116 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  116100215 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 1658'}
+[0m[32muser 2/2:  116100215 nicewebrl.utils - INFO - {'message': 'Ping 4244'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 8955'}
+[0m[32muser 2/2:  116100215 nicewebrl.utils - INFO - {'message': 'Ping 7243'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 3693'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 2326'}
+[0m[32muser 2/2:  116100215 nicewebrl.utils - INFO - {'message': 'Ping 1880'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 8131'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 98'}
+[0m[32muser 2/2:  116100215 nicewebrl.utils - INFO - {'message': 'Ping 7569'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 1323'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 8810'}
+[0m[32muser 2/2:  116100215 nicewebrl.utils - INFO - {'message': 'Ping 9278'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 7817'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 7828'}
+[0m[32muser 2/2:  116100215 nicewebrl.utils - INFO - {'message': 'Ping 7202'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 7125'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 2750'}
+[0m[32muser 2/2:  116100215 nicewebrl.utils - INFO - {'message': 'Ping 2730'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 4924'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 5509'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 2227'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 707'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 9413'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 6695'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 6624'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 8158'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 3406'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 400'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 2330'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 2433'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 6180'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 9907'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 7093'}
+[0m[31muser 1/2:  2600381116 nicewebrl.utils - INFO - {'message': 'Ping 3920'}
+[0m[31muser 1/1:  227948893 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  227948893 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  49169810 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 7715'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 1559'}
+[0m[32muser 2/2:  49169810 nicewebrl.utils - INFO - {'message': 'Ping 1019'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 1096'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 5299'}
+[0m[32muser 2/2:  49169810 |block 0: block_0eb39575de824f04b43eb08e991bfd46| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 689'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 5665'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 1330'}
+[0m[32muser 2/2:  49169810 |block 0: block_0eb39575de824f04b43eb08e991bfd46| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 9581'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 6745'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 3825'}
+[0m[32muser 2/2:  49169810 |block 0: block_0eb39575de824f04b43eb08e991bfd46| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 3818'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 5924'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 9710'}
+[0m[32muser 2/2:  49169810 |block 0: block_0eb39575de824f04b43eb08e991bfd46| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 1370'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 3666'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 4217'}
+[0m[32muser 2/2:  49169810 |block 0: block_0eb39575de824f04b43eb08e991bfd46| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 5699'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 5053'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 9862'}
+[0m[32muser 2/2:  49169810 |block 0: block_0eb39575de824f04b43eb08e991bfd46| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 1526'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 667'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 6168'}
+[0m[32muser 2/2:  49169810 |block 0: block_0eb39575de824f04b43eb08e991bfd46| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 2910'}
+[0m[32muser 2/2:  49169810 |block 0: block_0eb39575de824f04b43eb08e991bfd46| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 3728'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 7956'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 8941'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 3529'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 2589'}
+[0m[32muser 2/2:  49169810 |block 0: block_0eb39575de824f04b43eb08e991bfd46| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 6093'}
+[0m[32muser 2/2:  49169810 |block 0: block_0eb39575de824f04b43eb08e991bfd46| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 6521'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 2050'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 7785'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 584'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 4158'}
+[0m[32muser 2/2:  49169810 |block 0: block_0eb39575de824f04b43eb08e991bfd46| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 538'}
+[0m[32muser 2/2:  49169810 |block 0: block_0eb39575de824f04b43eb08e991bfd46| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 6809'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 8928'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 8904'}
+[0m[32muser 2/2:  49169810 |block 0: block_0eb39575de824f04b43eb08e991bfd46| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 5050'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 1456'}
+[0m[31muser 1/2:  227948893 nicewebrl.utils - INFO - {'message': 'Ping 3420'}
+[0m[32muser 2/2:  49169810 |block 0: block_0eb39575de824f04b43eb08e991bfd46| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 1329'}
+[0m[31muser 1/1:  1449746720 |block 2: block_5c64d95f3cf54e18802360e8e11fb9c4| |stage 8: oc_cecp_pred_1000 Survey| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  3992775279 |block 0: block_04652e3784de4899916295db127d609b| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  3992775279 |block 0: block_d391b2f2dd644414b1429be0bd6c53cc| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  3992775279 |block 0: block_d391b2f2dd644414b1429be0bd6c53cc| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Getting latest stage state
+[0m[32muser 2/2:  3992775279 |block 0: block_d391b2f2dd644414b1429be0bd6c53cc| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - No stage tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0 state found, starting new stage
+[0m[32muser 2/2:  3992775279 |block 0: block_d391b2f2dd644414b1429be0bd6c53cc| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 7153'}
+[0m[31muser 1/1:  1449746720 |block 2: block_5c64d95f3cf54e18802360e8e11fb9c4| |stage 8: oc_cecp_pred_1000 Survey| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  3533266238 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1449746720 |block 0: block_3b3e2ccc3af34288876a0e0836af144f| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1449746720 |block 0: block_3b3e2ccc3af34288876a0e0836af144f| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 1319'}
+[0m[32muser 2/2:  3533266238 |block 0: block_7abb08e3f61b434ca11396b10eff26f3| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1449746720 |block 0: block_3b3e2ccc3af34288876a0e0836af144f| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Getting latest stage state
+[0m[31muser 1/2:  1449746720 |block 0: block_3b3e2ccc3af34288876a0e0836af144f| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - No stage tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0 state found, starting new stage
+[0m[32muser 2/2:  3533266238 |block 0: block_7abb08e3f61b434ca11396b10eff26f3| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 7188'}
+[0m[32muser 2/2:  3533266238 |block 0: block_7abb08e3f61b434ca11396b10eff26f3| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Getting latest stage state
+[0m[32muser 2/2:  3533266238 |block 0: block_7abb08e3f61b434ca11396b10eff26f3| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - No stage tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0 state found, starting new stage
+[0m[31muser 1/1:  1449746720 |block 0: block_3b3e2ccc3af34288876a0e0836af144f| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  1449746720 |block 0: block_3b3e2ccc3af34288876a0e0836af144f| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  1843361176 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1449746720 |block 0: block_055126ab908c41858e807439edc47900| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1449746720 |block 0: block_055126ab908c41858e807439edc47900| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Getting latest stage state
+[0m[31muser 1/2:  1449746720 |block 0: block_055126ab908c41858e807439edc47900| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Loading stage tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0 state from memory
+[0m[31muser 1/2:  1449746720 |block 0: block_055126ab908c41858e807439edc47900| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 3726'}
+[0m[31muser 1/2:  1449746720 |block 0: block_055126ab908c41858e807439edc47900| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  1843361176 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1449746720 |block 0: block_3d3547cd3a43486cb5335757bab6e15e| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1449746720 |block 0: block_3d3547cd3a43486cb5335757bab6e15e| |stage 1: Tutorial| nicewebrl.utils - INFO - {'message': 'Ping 2568'}
+[0m[31muser 1/2:  1449746720 |block 0: block_3d3547cd3a43486cb5335757bab6e15e| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Getting latest stage state
+[0m[31muser 1/2:  1449746720 |block 0: block_3d3547cd3a43486cb5335757bab6e15e| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Loading stage tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0 state from memory
+[0m[32muser 2/2:  1843361176 nicewebrl.utils - INFO - {'message': 'Ping 1950'}
+[0m[32muser 2/2:  1843361176 |block 0: block_fc24ba26ae0b41fda1bff86c9ae56e60| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1449746720 |block 0: block_3d3547cd3a43486cb5335757bab6e15e| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1449746720 |block 0: block_f224c5799b8f422c8408ed1150e7cb20| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1449746720 |block 0: block_f224c5799b8f422c8408ed1150e7cb20| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Getting latest stage state
+[0m[31muser 1/2:  1449746720 |block 0: block_f224c5799b8f422c8408ed1150e7cb20| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Loading stage tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0 state from memory
+[0m[32muser 2/2:  1843361176 |block 0: block_fc24ba26ae0b41fda1bff86c9ae56e60| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 5755'}
+[0m[32muser 2/2:  1843361176 |block 0: block_fc24ba26ae0b41fda1bff86c9ae56e60| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Getting latest stage state
+[0m[32muser 2/2:  1843361176 |block 0: block_fc24ba26ae0b41fda1bff86c9ae56e60| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - No stage tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0 state found, starting new stage
+[0m[31muser 1/2:  1449746720 |block 0: block_f224c5799b8f422c8408ed1150e7cb20| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 5978'}
+[0m[31muser 1/1:  1449746720 |block 0: block_f224c5799b8f422c8408ed1150e7cb20| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  1843361176 |block 0: block_fc24ba26ae0b41fda1bff86c9ae56e60| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1449746720 |block 0: block_ed1a65d5c6514ff3bf0adafb694b2c9b| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1449746720 |block 0: block_ed1a65d5c6514ff3bf0adafb694b2c9b| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Getting latest stage state
+[0m[31muser 1/2:  1449746720 |block 0: block_ed1a65d5c6514ff3bf0adafb694b2c9b| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Loading stage tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0 state from memory
+[0m[31muser 1/2:  1449746720 |block 0: block_ed1a65d5c6514ff3bf0adafb694b2c9b| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 4379'}
+[0m[32muser 2/2:  1843361176 |block 0: block_c33499e3c8234ca29cd4ec5bda639716| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1449746720 |block 0: block_ed1a65d5c6514ff3bf0adafb694b2c9b| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  1843361176 |block 0: block_c33499e3c8234ca29cd4ec5bda639716| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1449746720 |block 0: block_b26677dec55f4afdae7064f762a7f254| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  1843361176 |block 0: block_85c096026d6e42eabca7ed5a54997ac5| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  1843361176 |block 0: block_85c096026d6e42eabca7ed5a54997ac5| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 481'}
+[0m[31muser 1/2:  1449746720 |block 0: block_b26677dec55f4afdae7064f762a7f254| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 5507'}
+[0m[32muser 2/2:  1843361176 |block 0: block_85c096026d6e42eabca7ed5a54997ac5| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 5632'}
+[0m[31muser 1/2:  1449746720 |block 0: block_b26677dec55f4afdae7064f762a7f254| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 1442'}
+[0m[32muser 2/2:  1843361176 |block 0: block_85c096026d6e42eabca7ed5a54997ac5| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Getting latest stage state
+[0m[32muser 2/2:  1843361176 |block 0: block_85c096026d6e42eabca7ed5a54997ac5| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Loading stage tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0 state from memory
+[0m[31muser 1/2:  1449746720 |block 0: block_b26677dec55f4afdae7064f762a7f254| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Getting latest stage state
+[0m[31muser 1/2:  1449746720 |block 0: block_b26677dec55f4afdae7064f762a7f254| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Loading stage tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0 state from memory
+[0m[31muser 1/2:  1449746720 |block 0: block_b26677dec55f4afdae7064f762a7f254| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 5335'}
+[0m[32muser 2/2:  1843361176 |block 0: block_85c096026d6e42eabca7ed5a54997ac5| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 7395'}
+[0m[32muser 2/2:  1843361176 |block 0: block_85c096026d6e42eabca7ed5a54997ac5| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1449746720 |block 0: block_b26677dec55f4afdae7064f762a7f254| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 7437'}
+[0m[32muser 2/2:  1843361176 |block 0: block_85c096026d6e42eabca7ed5a54997ac5| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 2225'}
+[0m[32muser 2/2:  1843361176 |block 0: block_96a5f7ffde68484e985ba23938b789c4| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  1843361176 |block 0: block_96a5f7ffde68484e985ba23938b789c4| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Getting latest stage state
+[0m[32muser 2/2:  1843361176 |block 0: block_96a5f7ffde68484e985ba23938b789c4| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Loading stage tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0 state from memory
+[0m[31muser 1/1:  1449746720 |block 0: block_b26677dec55f4afdae7064f762a7f254| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  3290206467 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1449746720 |block 0: block_7ec1c5048e42447a8c28a812d7b17032| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1449746720 |block 0: block_7ec1c5048e42447a8c28a812d7b17032| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Getting latest stage state
+[0m[31muser 1/2:  1449746720 |block 0: block_7ec1c5048e42447a8c28a812d7b17032| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Loading stage tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0 state from memory
+[0m[31muser 1/2:  1449746720 |block 0: block_7ec1c5048e42447a8c28a812d7b17032| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 3895'}
+[0m[32muser 2/2:  3290206467 |block 0: block_a5b8f8a16252429f8824eeb6b8cdde75| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1449746720 |block 0: block_7ec1c5048e42447a8c28a812d7b17032| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - finished stage 'tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0'. stats: {'nsteps': 10, 'nepisodes': 1, 'nsuccesses': 0}
+[0m[31muser 1/2:  1449746720 |block 0: block_7ec1c5048e42447a8c28a812d7b17032| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - finishing handle key press
+[0m[31muser 1/2:  1449746720 |block 0: block_7ec1c5048e42447a8c28a812d7b17032| |stage 3: Post-Tutorial| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  3290206467 |block 0: block_a5b8f8a16252429f8824eeb6b8cdde75| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  3290206467 |block 0: block_ded2fbf18ae546099abd257fe6b8b6ee| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  3290206467 |block 0: block_ded2fbf18ae546099abd257fe6b8b6ee| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 6267'}
+[0m[32muser 2/2:  3290206467 |block 0: block_ded2fbf18ae546099abd257fe6b8b6ee| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 8020'}
+[0m[32muser 2/2:  3290206467 |block 0: block_ded2fbf18ae546099abd257fe6b8b6ee| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 5225'}
+[0m[32muser 2/2:  3290206467 |block 0: block_ded2fbf18ae546099abd257fe6b8b6ee| |stage 2: tutorial_oc_cecp_pred_1000_coord_ring_9_agent0| nicewebrl.stages - INFO - Getting latest stage state
+[0m[32muser 2/2:  3290206467 |block 0: block_ded2fbf18ae546099abd257fe6b8b6ee| |stage 2: tutorial_oc_cecp_pred_1000_coord_ring_9_agent0| nicewebrl.stages - INFO - No stage tutorial_oc_cecp_pred_1000_coord_ring_9_agent0 state found, starting new stage
+[0m[32muser 2/2:  3290206467 |block 0: block_ded2fbf18ae546099abd257fe6b8b6ee| |stage 2: tutorial_oc_cecp_pred_1000_coord_ring_9_agent0| nicewebrl.stages - INFO - finished stage 'tutorial_oc_cecp_pred_1000_coord_ring_9_agent0'. stats: {'nsteps': 10, 'nepisodes': 1, 'nsuccesses': 0}
+[0m[32muser 2/2:  3290206467 |block 0: block_ded2fbf18ae546099abd257fe6b8b6ee| |stage 2: tutorial_oc_cecp_pred_1000_coord_ring_9_agent0| nicewebrl.stages - INFO - finishing handle key press
+[0m[32muser 2/2:  3290206467 |block 0: block_ded2fbf18ae546099abd257fe6b8b6ee| |stage 4: Post-Tutorial| nicewebrl.utils - INFO - {'message': 'Ping 1800'}
+[0m[32muser 2/2:  3290206467 |block 1: block_d79f3c90971b43ae90ea8101841aa479| |stage 4: exp0_oc_cec_v3_coord_ring_9_agent4| nicewebrl.stages - INFO - Getting latest stage state
+[0m[32muser 2/2:  3290206467 |block 1: block_d79f3c90971b43ae90ea8101841aa479| |stage 4: exp0_oc_cec_v3_coord_ring_9_agent4| nicewebrl.stages - INFO - No stage exp0_oc_cec_v3_coord_ring_9_agent4 state found, starting new stage
+[0m[32muser 2/2:  3290206467 |block 1: block_d79f3c90971b43ae90ea8101841aa479| |stage 4: exp0_oc_cec_v3_coord_ring_9_agent4| nicewebrl.stages - INFO - finished stage 'exp0_oc_cec_v3_coord_ring_9_agent4'. stats: {'nsteps': 10, 'nepisodes': 1, 'nsuccesses': 0}
+[0m[32muser 2/2:  3290206467 |block 1: block_d79f3c90971b43ae90ea8101841aa479| |stage 4: exp0_oc_cec_v3_coord_ring_9_agent4| nicewebrl.stages - INFO - finishing handle key press
+[0m[32muser 2/2:  3290206467 |block 1: block_d79f3c90971b43ae90ea8101841aa479| |stage 5: oc_cec_v3 Survey| nicewebrl.utils - INFO - {'message': 'Ping 3702'}
+[0m[32muser 2/2:  3290206467 |block 1: block_d79f3c90971b43ae90ea8101841aa479| |stage 5: oc_cec_v3 Survey| nicewebrl.utils - INFO - {'message': 'Ping 2437'}
+[0m[32muser 2/2:  3290206467 |block 1: block_d79f3c90971b43ae90ea8101841aa479| |stage 5: oc_cec_v3 Survey| nicewebrl.utils - INFO - {'message': 'Ping 6129'}
+[0m[32muser 2/2:  3290206467 |block 1: block_d79f3c90971b43ae90ea8101841aa479| |stage 5: oc_cec_v3 Survey| nicewebrl.utils - INFO - {'message': 'Ping 2129'}
+[0m[32muser 2/2:  3290206467 |block 1: block_d79f3c90971b43ae90ea8101841aa479| |stage 5: oc_cec_v3 Survey| nicewebrl.utils - INFO - {'message': 'Ping 3563'}
+[0m[32muser 2/2:  3290206467 |block 1: block_d79f3c90971b43ae90ea8101841aa479| |stage 5: oc_cec_v3 Survey| nicewebrl.utils - INFO - {'message': 'Ping 2937'}
+[0m[32muser 2/2:  3290206467 |block 1: block_d79f3c90971b43ae90ea8101841aa479| |stage 5: oc_cec_v3 Survey| nicewebrl.utils - INFO - {'message': 'Ping 7869'}
+[0m[32muser 2/2:  3290206467 |block 1: block_d79f3c90971b43ae90ea8101841aa479| |stage 5: oc_cec_v3 Survey| nicewebrl.utils - INFO - {'message': 'Ping 7479'}
+[0m[32muser 2/2:  3290206467 |block 1: block_d79f3c90971b43ae90ea8101841aa479| |stage 5: oc_cec_v3 Survey| nicewebrl.utils - INFO - {'message': 'Ping 7643'}
+[0m[32muser 2/2:  3290206467 |block 1: block_d79f3c90971b43ae90ea8101841aa479| |stage 5: oc_cec_v3 Survey| nicewebrl.utils - INFO - {'message': 'Ping 3062'}
+[0m[32muser 2/2:  3290206467 |block 1: block_d79f3c90971b43ae90ea8101841aa479| |stage 5: oc_cec_v3 Survey| nicewebrl.utils - INFO - {'message': 'Ping 9158'}
+[0m[32muser 2/2:  3290206467 |block 1: block_d79f3c90971b43ae90ea8101841aa479| |stage 5: oc_cec_v3 Survey| nicewebrl.utils - INFO - {'message': 'Ping 9471'}
+[0m[33muser 3/3:  766986340 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[34muser 4/4:  1796739725 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  1449746720 |block 0: block_7ec1c5048e42447a8c28a812d7b17032| |stage 3: Post-Tutorial| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  2268340409 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1449746720 |block 0: block_6fd33714952b452882403d28e473f5c5| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1449746720 |block 0: block_6fd33714952b452882403d28e473f5c5| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Getting latest stage state
+[0m[31muser 1/2:  1449746720 |block 0: block_6fd33714952b452882403d28e473f5c5| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Loading stage tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0 state from memory
+[0m[31muser 1/2:  1449746720 |block 0: block_6fd33714952b452882403d28e473f5c5| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 3743'}
+[0m[32muser 2/2:  2268340409 |block 0: block_89d5015849c1410e86eaa192667c984f| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  2268340409 |block 0: block_89d5015849c1410e86eaa192667c984f| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 300'}
+[0m[32muser 2/2:  2268340409 |block 0: block_89d5015849c1410e86eaa192667c984f| |stage 2: tutorial_oc_cecp_pred_1000_coord_ring_9_agent0| nicewebrl.stages - INFO - Getting latest stage state
+[0m[32muser 2/2:  2268340409 |block 0: block_89d5015849c1410e86eaa192667c984f| |stage 2: tutorial_oc_cecp_pred_1000_coord_ring_9_agent0| nicewebrl.stages - INFO - No stage tutorial_oc_cecp_pred_1000_coord_ring_9_agent0 state found, starting new stage
+[0m[31muser 1/2:  1449746720 |block 0: block_6fd33714952b452882403d28e473f5c5| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 5185'}
+[0m[31muser 1/1:  3510483021 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/1:  3510483021 nicewebrl.utils - INFO - {'message': 'Ping 6863'}
+[0m[31muser 1/1:  3510483021 |block 0: block_69931d1b5f924150845de1975be46caa| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  1449746720 |block 0: block_6fd33714952b452882403d28e473f5c5| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  3510483021 |block 0: block_69931d1b5f924150845de1975be46caa| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Getting latest stage state
+[0m[31muser 1/2:  3510483021 |block 0: block_69931d1b5f924150845de1975be46caa| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - No stage tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0 state found, starting new stage
+[0m[32muser 2/2:  1449746720 |block 0: block_1ed62d9dd8874cd19a1f722948a1c875| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  1449746720 |block 0: block_1ed62d9dd8874cd19a1f722948a1c875| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Getting latest stage state
+[0m[32muser 2/2:  1449746720 |block 0: block_1ed62d9dd8874cd19a1f722948a1c875| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Loading stage tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0 state from memory
+[0m[31muser 1/2:  3510483021 |block 0: block_69931d1b5f924150845de1975be46caa| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 7233'}
+[0m[31muser 1/2:  3510483021 |block 0: block_69931d1b5f924150845de1975be46caa| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  1449746720 |block 0: block_1ed62d9dd8874cd19a1f722948a1c875| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 2186'}
+[0m[31muser 1/2:  3510483021 |block 0: block_9a22d12f4eba4339bd7ca5aef42ef761| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  3510483021 |block 0: block_9a22d12f4eba4339bd7ca5aef42ef761| |stage 1: Tutorial| nicewebrl.utils - INFO - {'message': 'Ping 8123'}
+[0m[31muser 1/2:  3510483021 |block 0: block_9a22d12f4eba4339bd7ca5aef42ef761| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Getting latest stage state
+[0m[31muser 1/2:  3510483021 |block 0: block_9a22d12f4eba4339bd7ca5aef42ef761| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Loading stage tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0 state from memory
+[0m[31muser 1/2:  3510483021 |block 0: block_9a22d12f4eba4339bd7ca5aef42ef761| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 7957'}
+[0m[32muser 2/2:  1449746720 |block 0: block_1ed62d9dd8874cd19a1f722948a1c875| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 5603'}
+[0m[31muser 1/2:  3510483021 |block 0: block_9a22d12f4eba4339bd7ca5aef42ef761| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 5034'}
+[0m[31muser 1/2:  3510483021 |block 0: block_9a22d12f4eba4339bd7ca5aef42ef761| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 4493'}
+[0m[32muser 2/2:  1449746720 |block 0: block_1ed62d9dd8874cd19a1f722948a1c875| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 477'}
+[0m[31muser 1/2:  3510483021 |block 0: block_9a22d12f4eba4339bd7ca5aef42ef761| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 9443'}
+[0m[31muser 1/2:  3510483021 |block 0: block_9a22d12f4eba4339bd7ca5aef42ef761| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 268'}
+[0m[32muser 2/2:  1449746720 |block 0: block_1ed62d9dd8874cd19a1f722948a1c875| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 3767'}
+[0m[31muser 1/2:  3510483021 |block 0: block_9a22d12f4eba4339bd7ca5aef42ef761| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 6193'}
+[0m[32muser 2/2:  1449746720 |block 0: block_1ed62d9dd8874cd19a1f722948a1c875| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 8204'}
+[0m[32muser 2/2:  1449746720 |block 0: block_1ed62d9dd8874cd19a1f722948a1c875| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - finished stage 'tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0'. stats: {'nsteps': 20, 'nepisodes': 2, 'nsuccesses': 0}
+[0m[32muser 2/2:  1449746720 |block 0: block_1ed62d9dd8874cd19a1f722948a1c875| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - finishing handle key press
+[0m[31muser 1/2:  3510483021 |block 0: block_9a22d12f4eba4339bd7ca5aef42ef761| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 2023'}
+[0m[32muser 2/2:  1449746720 |block 1: block_35c97f5fc590456089d24a483aedfebb| |stage 4: exp0_oc_cec_v3_counter_circuit_9_agent1| nicewebrl.stages - INFO - Getting latest stage state
+[0m[32muser 2/2:  1449746720 |block 1: block_35c97f5fc590456089d24a483aedfebb| |stage 4: exp0_oc_cec_v3_counter_circuit_9_agent1| nicewebrl.stages - INFO - No stage exp0_oc_cec_v3_counter_circuit_9_agent1 state found, starting new stage
+[0m[32muser 2/2:  1449746720 |block 1: block_35c97f5fc590456089d24a483aedfebb| |stage 4: exp0_oc_cec_v3_counter_circuit_9_agent1| nicewebrl.utils - INFO - {'message': 'Ping 5078'}
+[0m[32muser 2/2:  1449746720 |block 1: block_35c97f5fc590456089d24a483aedfebb| |stage 4: exp0_oc_cec_v3_counter_circuit_9_agent1| nicewebrl.utils - INFO - {'message': 'Ping 4911'}
+[0m[31muser 1/2:  3510483021 |block 0: block_9a22d12f4eba4339bd7ca5aef42ef761| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 569'}
+[0m[32muser 2/2:  1449746720 |block 1: block_35c97f5fc590456089d24a483aedfebb| |stage 4: exp0_oc_cec_v3_counter_circuit_9_agent1| nicewebrl.stages - INFO - finished stage 'exp0_oc_cec_v3_counter_circuit_9_agent1'. stats: {'nsteps': 10, 'nepisodes': 1, 'nsuccesses': 0}
+[0m[32muser 2/2:  1449746720 |block 1: block_35c97f5fc590456089d24a483aedfebb| |stage 4: exp0_oc_cec_v3_counter_circuit_9_agent1| nicewebrl.stages - INFO - finishing handle key press
+[0m[32muser 2/2:  1449746720 |block 1: block_35c97f5fc590456089d24a483aedfebb| |stage 5: oc_cec_v3 Survey| nicewebrl.utils - INFO - {'message': 'Ping 7234'}
+[0m[31muser 1/2:  3510483021 |block 0: block_9a22d12f4eba4339bd7ca5aef42ef761| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - finished stage 'tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0'. stats: {'nsteps': 10, 'nepisodes': 1, 'nsuccesses': 0}
+[0m[31muser 1/2:  3510483021 |block 0: block_9a22d12f4eba4339bd7ca5aef42ef761| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - finishing handle key press
+[0m[31muser 1/2:  3510483021 |block 1: block_a3825816222c47f8b8af70da271a63a1| |stage 4: exp0_fcp_counter_circuit_9_agent4| nicewebrl.stages - INFO - Getting latest stage state
+[0m[31muser 1/2:  3510483021 |block 1: block_a3825816222c47f8b8af70da271a63a1| |stage 4: exp0_fcp_counter_circuit_9_agent4| nicewebrl.stages - INFO - No stage exp0_fcp_counter_circuit_9_agent4 state found, starting new stage
+[0m[31muser 1/2:  3510483021 |block 1: block_a3825816222c47f8b8af70da271a63a1| |stage 4: exp0_fcp_counter_circuit_9_agent4| nicewebrl.utils - INFO - {'message': 'Ping 9494'}
+[0m[32muser 2/2:  1449746720 |block 1: block_35c97f5fc590456089d24a483aedfebb| |stage 5: oc_cec_v3 Survey| nicewebrl.utils - INFO - {'message': 'Ping 9770'}
+[0m[31muser 1/2:  3510483021 |block 1: block_a3825816222c47f8b8af70da271a63a1| |stage 4: exp0_fcp_counter_circuit_9_agent4| nicewebrl.utils - INFO - {'message': 'Ping 4269'}
+[0m[32muser 2/2:  1449746720 |block 1: block_35c97f5fc590456089d24a483aedfebb| |stage 5: oc_cec_v3 Survey| nicewebrl.utils - INFO - {'message': 'Ping 6947'}
+[0m[31muser 1/2:  3510483021 |block 1: block_a3825816222c47f8b8af70da271a63a1| |stage 4: exp0_fcp_counter_circuit_9_agent4| nicewebrl.utils - INFO - {'message': 'Ping 8197'}
 [0m

@@ -6,8 +6,6 @@ import jax
 import jax.numpy as jnp
 from flax.struct import PyTreeNode
 import numpy as np
-import wandb
-
 from ..env import Observation, Action, Env, EnvState, EnvConst
 from ..policy.agent_wrapper import RecurrentAgent
 from ..utils import split_rng_to_list
@@ -132,6 +130,7 @@ class BaseController(ABC):
         config: dict = None,
         resume_from: str = None
     ) -> None:
+        import wandb
         if entity is None:
             os.environ['WANDB_MODE'] = 'offline'
 
@@ -174,6 +173,7 @@ class BaseController(ABC):
         return res
 
     def log(self, step: int, info: dict[str, Any], log_prefix: str = None):
+        import wandb
         info = self.itemize_dict(info)
         if log_prefix is not None:
             info = {f'{log_prefix}/{k}': v for k, v in info.items()}

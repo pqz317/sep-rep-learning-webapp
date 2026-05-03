@@ -4,7 +4,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends git && rm -rf /
 
 # Core ML dependencies
 RUN pip install --no-cache-dir "jax[cpu]" flax distrax optax
-RUN pip install --no-cache-dir tqdm wandb matplotlib seaborn imageio aiofiles
+RUN pip install --no-cache-dir tqdm matplotlib seaborn imageio aiofiles
 
 # Web app dependencies
 RUN pip install --no-cache-dir nicegui "tortoise-orm<1.0" "nicewebrl @ git+https://github.com/KempnerInstitute/nicewebrl.git"
@@ -22,19 +22,14 @@ RUN pip install --no-cache-dir -e .
 # The same path is used at runtime so compiled artifacts are reused.
 ENV JAX_COMPILATION_CACHE_DIR=/app/.jax_cache
 
-# W&B credentials needed only during the precompile build step.
-# Pass at build time: docker build --build-arg WANDB_API_KEY_BUILD=... --build-arg WANDB_ENTITY_BUILD=...
-# These ARGs are not promoted to ENV, so they are not stored in the final image config.
-ARG WANDB_API_KEY_BUILD=""
-ARG WANDB_ENTITY_BUILD=""
+# Set to "" (empty string) to skip precompilation: docker build --build-arg PRECOMPILE=
+ARG PRECOMPILE=""
 
-RUN WANDB_API_KEY=${WANDB_API_KEY_BUILD} \
-    WANDB_ENTITY=${WANDB_ENTITY_BUILD} \
-    python scripts/precompile.py
+RUN if [ -n "$PRECOMPILE" ]; then python scripts/precompile.py; fi
 
 ENV HOST=0.0.0.0
 ENV PORT=8080
-ENV DATA_DIR=/data
+ENV DATA_DIR=/app/data
 
 EXPOSE 8080
 
