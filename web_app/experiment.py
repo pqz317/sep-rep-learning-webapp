@@ -499,6 +499,21 @@ def make_survey_stage(name: str, tag: str, layout: str) -> FeedbackStage:
 
 _env_build_cache: dict[tuple[str, str], dict] = {}
 
+# Keyed on (load_tag, obs_dim, pad_obs_shape_to).  One JitWrapped object per unique
+# model architecture is reused across all users and agent_ids so JAX's trace cache
+# always hits after the first call → 0 new mmap regions per game step.
+_model_jit_cache: dict[tuple, "_JitModelWrapper"] = {}
+
+
+class _JitModelWrapper:
+    """Wraps a Flax module so .apply() dispatches through a single cached jax.jit call."""
+
+    def __init__(self, module: "nn.Module"):
+        self._jit_apply = jax.jit(module.apply)
+
+    def apply(self, params, *args, **kwargs):
+        return self._jit_apply(params, *args, **kwargs)
+
 
 def build_env(layout_name: str, env_name: str) -> dict:
     """Compile the web env and render fns for a layout/env pair.
@@ -586,11 +601,23 @@ def setup_env_stage(
         pad_target = model_info['pad_obs_shape_to']
         print(f"  Model uses pad_obs_shape_to={pad_target}.")
 
-    adapter = SepRepModelAdapter(
-        inner_model=actor_critic_fn,
-        obs_shape=obs_dim,
-        pad_obs_shape_to=pad_target,
-    )
+    # Cache the JIT-compiled wrapper keyed on model architecture.  All agent_ids for
+    # the same load_tag share the same architecture, so the first adapter's jit_apply
+    # is reused — JAX's trace cache hits for every subsequent call, creating 0 new
+    # mmap regions per game step instead of ~21 per eager dispatch.
+    adapter_cache_key = (load_tag, obs_dim, pad_target)
+    if adapter_cache_key not in _model_jit_cache:
+        adapter = SepRepModelAdapter(
+            inner_model=actor_critic_fn,
+            obs_shape=obs_dim,
+            pad_obs_shape_to=pad_target,
+        )
+        _model_jit_cache[adapter_cache_key] = _JitModelWrapper(adapter)
+        print(f"  Created JIT model wrapper (key={adapter_cache_key})")
+    else:
+        print(f"  Reusing cached JIT model wrapper (key={adapter_cache_key})")
+    model_wrapper = _model_jit_cache[adapter_cache_key]
+
     adapter_params = {'params': {'inner_model': model_state['actor_critic_params']['params']}}
 
     def init_hidden_state_fn():
@@ -621,7 +648,7 @@ def setup_env_stage(
         max_episodes=MAX_STAGE_EPISODES,
         verbosity=0,
         user_save_file_fn=save_file_fn,
-        model=adapter,
+        model=model_wrapper,
         model_params=adapter_params,
         num_seeds=1,
         using_param_stack=False,

@@ -1,0 +1,54 @@
+# --- Python cache and build ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# --- Virtual environments ---
+.venv/
+
+# --- env files ---
+*.env
+
+# --- OS / editor junk ---
+.DS_Store
+*.swp
+*.swo
+
+# --- Project-specific ---
+# Results: data, logs, experiment outputs
+results
+
+# Weights & Biases logs
+wandb/
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# README
+readme_example_trajectory.gif
+
+# example trajectories
+trajectories/
+
+# log files generated
+*.log
+
+# workspace config
+*.code-workspace
+
+# claude code files
+.claude/
+CLAUDE.md
+
+data/
+flydata/
+notes/
+models/
+figures/
+.nicegui/
+.jax_cache/

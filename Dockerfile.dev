@@ -1,0 +1,29 @@
+FROM python:3.11-slim
+
+RUN apt-get update && apt-get install -y --no-install-recommends git && rm -rf /var/lib/apt/lists/*
+
+# Core ML dependencies
+RUN pip install --no-cache-dir "jax[cpu]" flax distrax optax
+RUN pip install --no-cache-dir tqdm matplotlib seaborn pandas msgpack imageio aiofiles
+
+# Web app dependencies
+RUN pip install --no-cache-dir nicegui "tortoise-orm<1.0" "nicewebrl @ git+https://github.com/KempnerInstitute/nicewebrl.git"
+
+# Overcooked environments
+RUN git clone --depth=1 https://github.com/pqz317/crossEnvCooperation.git /src/crossEnvCooperation && \
+    pip install --no-cache-dir --no-deps -e /src/crossEnvCooperation
+
+WORKDIR /app
+
+ENV JAX_COMPILATION_CACHE_DIR=/app/.jax_cache
+ENV HOST=0.0.0.0
+ENV PORT=8080
+ENV DATA_DIR=/data
+
+EXPOSE 8080
+
+COPY docker-entrypoint-dev.sh /usr/local/bin/docker-entrypoint-dev.sh
+RUN chmod +x /usr/local/bin/docker-entrypoint-dev.sh
+
+ENTRYPOINT ["docker-entrypoint-dev.sh"]
+CMD ["sleep", "infinity"]

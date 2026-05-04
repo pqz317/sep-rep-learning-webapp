@@ -1612,4 +1612,54 @@ Stack (most recent call last):
 [0m[31muser 1/2:  3510483021 |block 1: block_a3825816222c47f8b8af70da271a63a1| |stage 4: exp0_fcp_counter_circuit_9_agent4| nicewebrl.utils - INFO - {'message': 'Ping 4269'}
 [0m[32muser 2/2:  1449746720 |block 1: block_35c97f5fc590456089d24a483aedfebb| |stage 5: oc_cec_v3 Survey| nicewebrl.utils - INFO - {'message': 'Ping 6947'}
 [0m[31muser 1/2:  3510483021 |block 1: block_a3825816222c47f8b8af70da271a63a1| |stage 4: exp0_fcp_counter_circuit_9_agent4| nicewebrl.utils - INFO - {'message': 'Ping 8197'}
+[0m[31muser 1/1:  1449746720 |block 1: block_35c97f5fc590456089d24a483aedfebb| |stage 5: oc_cec_v3 Survey| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  1482157344 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1449746720 |block 0: block_ae84449ba7cc481e88096c1ad039c7ee| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1449746720 |block 0: block_ae84449ba7cc481e88096c1ad039c7ee| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Getting latest stage state
+[0m[31muser 1/2:  1449746720 |block 0: block_ae84449ba7cc481e88096c1ad039c7ee| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Loading stage tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0 state from memory
+[0m[31muser 1/2:  1449746720 |block 0: block_ae84449ba7cc481e88096c1ad039c7ee| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 2391'}
+[0m[32muser 2/2:  1482157344 |block 0: block_1a21e9ae086b43b5bd33a1e38fbafebb| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  1482157344 |block 0: block_1a21e9ae086b43b5bd33a1e38fbafebb| |stage 0: Instructions| nicewebrl.utils - INFO - {'message': 'Ping 6707'}
+[0m[32muser 2/2:  1482157344 |block 0: block_1a21e9ae086b43b5bd33a1e38fbafebb| |stage 2: tutorial_oc_cecp_pred_1000_coord_ring_9_agent0| nicewebrl.stages - INFO - Getting latest stage state
+[0m[32muser 2/2:  1482157344 |block 0: block_1a21e9ae086b43b5bd33a1e38fbafebb| |stage 2: tutorial_oc_cecp_pred_1000_coord_ring_9_agent0| nicewebrl.stages - INFO - No stage tutorial_oc_cecp_pred_1000_coord_ring_9_agent0 state found, starting new stage
+[0m[31muser 1/1:  1449746720 |block 0: block_ae84449ba7cc481e88096c1ad039c7ee| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  1482157344 |block 0: block_1a21e9ae086b43b5bd33a1e38fbafebb| |stage 2: tutorial_oc_cecp_pred_1000_coord_ring_9_agent0| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  1482157344 |block 0: block_1a21e9ae086b43b5bd33a1e38fbafebb| |stage 2: tutorial_oc_cecp_pred_1000_coord_ring_9_agent0| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1449746720 |block 0: block_333ad732e8544d449db36997442a4adb| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1449746720 |block 0: block_333ad732e8544d449db36997442a4adb| |stage 1: Tutorial| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  1482157344 |block 0: block_1a21e9ae086b43b5bd33a1e38fbafebb| |stage 2: tutorial_oc_cecp_pred_1000_coord_ring_9_agent0| nicewebrl.utils - INFO - {'message': 'Ping 7998'}
+[0m[32muser 2/2:  1482157344 |block 0: block_0980adb5f2c0453b97e9bba89c1589e2| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  1482157344 |block 0: block_0980adb5f2c0453b97e9bba89c1589e2| |stage 2: tutorial_oc_cecp_pred_1000_coord_ring_9_agent0| nicewebrl.stages - INFO - Getting latest stage state
+[0m[32muser 2/2:  1482157344 |block 0: block_0980adb5f2c0453b97e9bba89c1589e2| |stage 2: tutorial_oc_cecp_pred_1000_coord_ring_9_agent0| nicewebrl.stages - INFO - Loading stage tutorial_oc_cecp_pred_1000_coord_ring_9_agent0 state from memory
+[0m[31muser 1/2:  1449746720 |block 0: block_18de2734ebe64f90bf6c4f38749ec917| |stage 0: Instructions| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[31muser 1/2:  1449746720 |block 0: block_18de2734ebe64f90bf6c4f38749ec917| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Getting latest stage state
+[0m[31muser 1/2:  1449746720 |block 0: block_18de2734ebe64f90bf6c4f38749ec917| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - Loading stage tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0 state from memory
+[0m[31muser 1/2:  1449746720 |block 0: block_18de2734ebe64f90bf6c4f38749ec917| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - finished stage 'tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0'. stats: {'nsteps': 40, 'nepisodes': 3, 'nsuccesses': 0}
+[0m[31muser 1/2:  1449746720 |block 0: block_18de2734ebe64f90bf6c4f38749ec917| |stage 2: tutorial_oc_cecp_pred_1000_counter_circuit_9_agent0| nicewebrl.stages - INFO - finishing handle key press
+[0m[31muser 1/2:  1449746720 |block 0: block_18de2734ebe64f90bf6c4f38749ec917| |stage 4: Post-Tutorial| nicewebrl.utils - INFO - {'message': 'Ping 524'}
+[0m[31muser 1/2:  1449746720 |block 1: block_a2758f8d263c4e14acadcf5a84df6348| |stage 4: exp0_oc_cec_v3_counter_circuit_9_agent1| nicewebrl.stages - INFO - Getting latest stage state
+[0m[31muser 1/2:  1449746720 |block 1: block_a2758f8d263c4e14acadcf5a84df6348| |stage 4: exp0_oc_cec_v3_counter_circuit_9_agent1| nicewebrl.stages - INFO - Loading stage exp0_oc_cec_v3_counter_circuit_9_agent1 state from memory
+[0m[32muser 2/2:  1482157344 |block 0: block_0980adb5f2c0453b97e9bba89c1589e2| |stage 2: tutorial_oc_cecp_pred_1000_coord_ring_9_agent0| nicewebrl.stages - INFO - finished stage 'tutorial_oc_cecp_pred_1000_coord_ring_9_agent0'. stats: {'nsteps': 10, 'nepisodes': 1, 'nsuccesses': 0}
+[0m[32muser 2/2:  1482157344 |block 0: block_0980adb5f2c0453b97e9bba89c1589e2| |stage 2: tutorial_oc_cecp_pred_1000_coord_ring_9_agent0| nicewebrl.stages - INFO - finishing handle key press
+[0m[32muser 2/2:  1482157344 |block 0: block_0980adb5f2c0453b97e9bba89c1589e2| |stage 3: Post-Tutorial| nicewebrl.utils - INFO - {'message': 'Ping 2823'}
+[0m[32muser 2/2:  1482157344 |block 1: block_8c7bb792180a498c9ad6470a2037951e| |stage 4: exp0_mep_coord_ring_9_agent3| nicewebrl.stages - INFO - Getting latest stage state
+[0m[32muser 2/2:  1482157344 |block 1: block_8c7bb792180a498c9ad6470a2037951e| |stage 4: exp0_mep_coord_ring_9_agent3| nicewebrl.stages - INFO - No stage exp0_mep_coord_ring_9_agent3 state found, starting new stage
+[0m[31muser 1/2:  1449746720 |block 1: block_a2758f8d263c4e14acadcf5a84df6348| |stage 4: exp0_oc_cec_v3_counter_circuit_9_agent1| nicewebrl.stages - INFO - finished stage 'exp0_oc_cec_v3_counter_circuit_9_agent1'. stats: {'nsteps': 20, 'nepisodes': 2, 'nsuccesses': 0}
+[0m[31muser 1/2:  1449746720 |block 1: block_a2758f8d263c4e14acadcf5a84df6348| |stage 4: exp0_oc_cec_v3_counter_circuit_9_agent1| nicewebrl.stages - INFO - finishing handle key press
+[0m[32muser 2/2:  1482157344 |block 1: block_8c7bb792180a498c9ad6470a2037951e| |stage 4: exp0_mep_coord_ring_9_agent3| nicewebrl.stages - INFO - finished stage 'exp0_mep_coord_ring_9_agent3'. stats: {'nsteps': 10, 'nepisodes': 1, 'nsuccesses': 0}
+[0m[32muser 2/2:  1482157344 |block 1: block_8c7bb792180a498c9ad6470a2037951e| |stage 4: exp0_mep_coord_ring_9_agent3| nicewebrl.stages - INFO - finishing handle key press
+[0m[31muser 1/2:  1449746720 |block 1: block_a2758f8d263c4e14acadcf5a84df6348| |stage 5: oc_cec_v3 Survey| nicewebrl.utils - INFO - {'message': 'Ping 5065'}
+[0m[32muser 2/2:  1482157344 |block 1: block_8c7bb792180a498c9ad6470a2037951e| |stage 5: mep Survey| nicewebrl.utils - INFO - {'message': 'Ping 6856'}
+[0m[32muser 2/2:  1482157344 |block 2: block_7e7c199cfaf948a1911285515e3cc1af| |stage 6: exp1_fcp_coord_ring_9_agent5| nicewebrl.stages - INFO - Getting latest stage state
+[0m[32muser 2/2:  1482157344 |block 2: block_7e7c199cfaf948a1911285515e3cc1af| |stage 6: exp1_fcp_coord_ring_9_agent5| nicewebrl.stages - INFO - No stage exp1_fcp_coord_ring_9_agent5 state found, starting new stage
+[0m[31muser 1/2:  1449746720 |block 2: block_395dd9e46f274947a3b5cd4266f6d431| |stage 6: exp1_oc_cecp_pred_1000_counter_circuit_9_agent1| nicewebrl.stages - INFO - Getting latest stage state
+[0m[31muser 1/2:  1449746720 |block 2: block_395dd9e46f274947a3b5cd4266f6d431| |stage 6: exp1_oc_cecp_pred_1000_counter_circuit_9_agent1| nicewebrl.stages - INFO - No stage exp1_oc_cecp_pred_1000_counter_circuit_9_agent1 state found, starting new stage
+[0m[31muser 1/2:  1449746720 |block 2: block_395dd9e46f274947a3b5cd4266f6d431| |stage 6: exp1_oc_cecp_pred_1000_counter_circuit_9_agent1| nicewebrl.utils - INFO - {'message': 'Ping 7691'}
+[0m[32muser 2/2:  1482157344 |block 2: block_7e7c199cfaf948a1911285515e3cc1af| |stage 6: exp1_fcp_coord_ring_9_agent5| nicewebrl.stages - INFO - finished stage 'exp1_fcp_coord_ring_9_agent5'. stats: {'nsteps': 10, 'nepisodes': 1, 'nsuccesses': 0}
+[0m[32muser 2/2:  1482157344 |block 2: block_7e7c199cfaf948a1911285515e3cc1af| |stage 6: exp1_fcp_coord_ring_9_agent5| nicewebrl.stages - INFO - finishing handle key press
+[0m[32muser 2/2:  1482157344 |block 2: block_7e7c199cfaf948a1911285515e3cc1af| |stage 7: fcp Survey| nicewebrl.utils - INFO - {'message': 'Ping 386'}
+[0m[31muser 1/2:  1449746720 |block 2: block_395dd9e46f274947a3b5cd4266f6d431| |stage 6: exp1_oc_cecp_pred_1000_counter_circuit_9_agent1| nicewebrl.stages - INFO - finished stage 'exp1_oc_cecp_pred_1000_counter_circuit_9_agent1'. stats: {'nsteps': 10, 'nepisodes': 1, 'nsuccesses': 0}
+[0m[31muser 1/2:  1449746720 |block 2: block_395dd9e46f274947a3b5cd4266f6d431| |stage 6: exp1_oc_cecp_pred_1000_counter_circuit_9_agent1| nicewebrl.stages - INFO - finishing handle key press
+[0m[31muser 1/2:  1449746720 |block 2: block_395dd9e46f274947a3b5cd4266f6d431| |stage 7: oc_cecp_pred_1000 Survey| nicewebrl.utils - INFO - {'message': 'Ping 5353'}
+[0m[32muser 2/2:  1482157344 |block 2: block_7e7c199cfaf948a1911285515e3cc1af| |stage 7: fcp Survey| nicewebrl.utils - INFO - {'message': 'Ping 3032'}
 [0m

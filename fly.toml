@@ -15,7 +15,7 @@ primary_region = 'sjc'
 
 [mounts]
   source = "data"
-  destination = "/data" 
+  destination = "/app/data" 
 
 [http_service]
   internal_port = 8080
