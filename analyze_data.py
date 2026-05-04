@@ -88,9 +88,9 @@ def load_overcooked_experience(data_dir):
     return result
 
 
-def load_test_user_ids(data_dir):
-    """Return a set of user IDs whose prolific ID contains 'test' (case-insensitive)."""
-    test_ids = set()
+def load_prolific_ids(data_dir):
+    """Return a dict mapping user_id -> prolific_id (empty string if unavailable)."""
+    result = {}
     for fname in os.listdir(data_dir):
         if not fname.startswith("user_data_") or not fname.endswith(".msgpack"):
             continue
@@ -104,24 +104,66 @@ def load_test_user_ids(data_dir):
             prolific_id = last.get(b"episode_metadata", {}).get(b"prolific_id", b"")
             if isinstance(prolific_id, bytes):
                 prolific_id = prolific_id.decode(errors="replace")
-            if "test" in prolific_id.lower():
-                test_ids.add(user_id)
+            result[user_id] = prolific_id
         except Exception:
             pass
-    return test_ids
+    return result
+
+
+def load_test_user_ids(data_dir):
+    """Return a set of user IDs whose prolific ID contains 'test' (case-insensitive)."""
+    prolific_ids = load_prolific_ids(data_dir)
+    return {uid for uid, pid in prolific_ids.items() if "test" in pid.lower()}
+
+
+EXPECTED_TAGS = {"fcp", "mep", "oc_cec_v3", "oc_cecp_pred_1000"}
+
+
+def load_incomplete_user_ids(data_dir):
+    """Return a set of user IDs that are missing one or more of the 4 expected survey tags."""
+    all_user_ids = set(load_user_ids(data_dir))
+    tags_per_user = {}
+    for fname in os.listdir(data_dir):
+        if not fname.startswith("survey_"):
+            continue
+        m_uid = re.search(r"user=(\d+)", fname)
+        m_tag = re.search(r"tag=(.+?)(?:_coord_ring|_counter_circuit)", fname)
+        if m_uid and m_tag:
+            tags_per_user.setdefault(m_uid.group(1), set()).add(m_tag.group(1))
+    return {uid for uid in all_user_ids if tags_per_user.get(uid, set()) != EXPECTED_TAGS}
 
 
 def _msgpack_records(path):
     with open(path, "rb") as f:
-        unpacker = msgpack.Unpacker(
-            f,
+        data = f.read()
+    unpacker = msgpack.Unpacker(
+        raw=True,
+        max_array_len=2**32,
+        max_map_len=2**32,
+        max_str_len=2**32,
+        ext_hook=_ext_hook,
+    )
+    unpacker.feed(data)
+    try:
+        return list(unpacker)
+    except msgpack.exceptions.FormatError:
+        # Some files have a reserved 0xc1 byte at offset 3 (after a 3-byte header)
+        # before the actual msgpack map payload; skip it and parse as a single object.
+        obj = msgpack.unpackb(
+            data[4:],
             raw=True,
             max_array_len=2**32,
             max_map_len=2**32,
             max_str_len=2**32,
             ext_hook=_ext_hook,
         )
-        return list(unpacker)
+        if isinstance(obj, dict):
+            records = []
+            for k, v in obj.items():
+                records.append(k)
+                records.append(v)
+            return records
+        raise
 
 
 def _decode_float32_ext(ext_tuple):
@@ -326,18 +368,31 @@ if __name__ == "__main__":
 
     user_ids = load_user_ids(data_dir)
     overcooked_exp = load_overcooked_experience(data_dir)
+    prolific_ids = load_prolific_ids(data_dir)
 
-    print("Overcooked experience per user:")
+    print("Users (user_id -> prolific_id, overcooked_experience):")
     for uid in user_ids:
+        prolific = prolific_ids.get(uid, "")
         exp = overcooked_exp.get(uid, "N/A")
-        print(f"  user={uid}: {exp}")
+        print(f"  user={uid}: prolific_id={prolific!r}, overcooked_exp={exp}")
 
-    exclude_ids = load_test_user_ids(data_dir) if args.exclude_test else None
-    if exclude_ids:
-        print(f"Excluding {len(exclude_ids)} test user(s): {exclude_ids}")
+    no_prolific_ids = {uid for uid in user_ids if not prolific_ids.get(uid)}
+    if no_prolific_ids:
+        print(f"Excluding {len(no_prolific_ids)} user(s) with no prolific ID: {sorted(no_prolific_ids)}")
+
+    incomplete_ids = load_incomplete_user_ids(data_dir)
+    if incomplete_ids:
+        print(f"Excluding {len(incomplete_ids)} incomplete user(s) (missing survey tags): {sorted(incomplete_ids)}")
+
+    exclude_ids = no_prolific_ids | incomplete_ids
+    if args.exclude_test:
+        test_ids = load_test_user_ids(data_dir)
+        if test_ids:
+            print(f"Excluding {len(test_ids)} test user(s): {sorted(test_ids)}")
+        exclude_ids |= test_ids
 
     n_total = len(user_ids)
-    n_excluded = len(exclude_ids) if exclude_ids else 0
+    n_excluded = len(exclude_ids)
     print(f"Users: {n_total} loaded, {n_excluded} excluded, {n_total - n_excluded} analyzed")
 
     gameplay_df = parse_gameplay_files(data_dir, exclude_ids=exclude_ids)

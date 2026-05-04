@@ -1662,4 +1662,6 @@ Stack (most recent call last):
 [0m[31muser 1/2:  1449746720 |block 2: block_395dd9e46f274947a3b5cd4266f6d431| |stage 6: exp1_oc_cecp_pred_1000_counter_circuit_9_agent1| nicewebrl.stages - INFO - finishing handle key press
 [0m[31muser 1/2:  1449746720 |block 2: block_395dd9e46f274947a3b5cd4266f6d431| |stage 7: oc_cecp_pred_1000 Survey| nicewebrl.utils - INFO - {'message': 'Ping 5353'}
 [0m[32muser 2/2:  1482157344 |block 2: block_7e7c199cfaf948a1911285515e3cc1af| |stage 7: fcp Survey| nicewebrl.utils - INFO - {'message': 'Ping 3032'}
+[0m[31muser 1/1:  1449746720 |block 2: block_395dd9e46f274947a3b5cd4266f6d431| |stage 7: oc_cecp_pred_1000 Survey| nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
+[0m[32muser 2/2:  208233313 nicegui - WARNING - Event listeners changed after initial definition. Re-rendering affected elements.
 [0m
