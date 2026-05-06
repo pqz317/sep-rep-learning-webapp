@@ -53,6 +53,15 @@ class ActionDistribution(dict[str, Distribution]):
     def entropy(self) -> jax.Array:
         return sum([self[k].entropy() for k in self.keys()])
     
+# Register ActionDistribution as a JAX pytree so jax.jit can trace through
+# functions that return it (keys are sorted for stable ordering).
+jax.tree_util.register_pytree_node(
+    ActionDistribution,
+    lambda x: ([x[k] for k in x.keys()], list(x.keys())),
+    lambda keys, values: ActionDistribution(dict(zip(keys, values))),
+)
+
+
 def get_distribution_info(pi: ActionDistribution) -> dict[str, float | jax.Array]:
     info = {}
     for k, d in pi.items():

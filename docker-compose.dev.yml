@@ -8,5 +8,6 @@ services:
     volumes:
       - .:/app
       - ./data:/data
+      - $HOME/sep-rep-learning:/sep-rep-learning
     ports:
       - "8889:8080"
