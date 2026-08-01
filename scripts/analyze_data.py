@@ -14,10 +14,12 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy.stats import wilcoxon, ttest_rel
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "scripts"))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from display_names import DISPLAY_NAMES, OC_ORIGINAL_LAYOUT_NAMES, DISPLAY_ORDERING
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), "newflydata")
+_PROJ_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+DATA_DIR = os.path.join(_PROJ_ROOT, "newflydata")
 
 TUTORIAL_DESC = b"Instructions & Tutorial"
 
@@ -385,7 +387,7 @@ def _run_wilcoxon_tests(df, test="wilcoxon"):
             paired = pivot[[CECP_RAW, other_raw]].dropna()
             if len(paired) < 3:
                 continue
-            stat, p = _paired_test(paired[CECP_RAW], paired[other_raw], "greater", test)
+            stat, p = _paired_test(paired[CECP_RAW], paired[other_raw], "two-sided", test)
             rows.append({"layout_raw": layout_raw, "other_raw": other_raw, "stat": stat, "p_raw": p})
         return rows
 
@@ -441,7 +443,7 @@ def _run_wilcoxon_tests_survey(df, test="wilcoxon"):
     """
     results = []
     for question in df["question"].unique():
-        alt = "less" if question in LOWER_QUESTIONS else "greater"
+        alt = "two-sided"
         sub = (
             df[df["question"] == question]
             .groupby(["user_id", "tag"])["score"]
@@ -529,8 +531,10 @@ def _draw_significance_brackets(ax, sig_results, bar_positions, x_display_order,
 # Summary CSV
 # ---------------------------------------------------------------------------
 
-def generate_summary_csv(gameplay_df, prolific_ids, overcooked_exp, out_path="results/user_episode_summary.csv"):
+def generate_summary_csv(gameplay_df, prolific_ids, overcooked_exp, out_path=None):
     """Build and return a per-episode summary DataFrame, also saving it as a CSV."""
+    if out_path is None:
+        out_path = os.path.join(_PROJ_ROOT, "results", "user_episode_summary.csv")
     df = gameplay_df.copy()
     df["prolific_id"] = df["user_id"].map(prolific_ids).fillna("")
     df["overcooked_experience"] = df["user_id"].map(overcooked_exp).fillna("N/A")
@@ -547,8 +551,10 @@ def generate_summary_csv(gameplay_df, prolific_ids, overcooked_exp, out_path="re
 # Plotting
 # ---------------------------------------------------------------------------
 
-def plot_return(df, out_path="figures/avg_return_by_layout.png", test="wilcoxon",
+def plot_return(df, out_path=None, test="ttest",
                 show_both_layouts=True, show_significance=True):
+    if out_path is None:
+        out_path = os.path.join(_PROJ_ROOT, "figures", "avg_return_by_layout.png")
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
 
     if show_significance:
@@ -573,6 +579,15 @@ def plot_return(df, out_path="figures/avg_return_by_layout.png", test="wilcoxon"
         df_all = df.copy()
         df_all["layout"] = "Both Layouts"
         df = pd.concat([df, df_all], ignore_index=True)
+
+    # Save data needed to reproduce this figure
+    data_dir = os.path.join(_PROJ_ROOT, "results", "analyze_data")
+    os.makedirs(data_dir, exist_ok=True)
+    df.to_csv(os.path.join(data_dir, "return_data.csv"), index=False)
+    print(f"Saved: {os.path.join(data_dir, 'return_data.csv')}")
+    if sig_results:
+        pd.DataFrame(sig_results).to_csv(os.path.join(data_dir, "return_significance.csv"), index=False)
+        print(f"Saved: {os.path.join(data_dir, 'return_significance.csv')}")
 
     fig, ax = plt.subplots(figsize=(5, 5))
     sns.barplot(
@@ -603,16 +618,17 @@ def plot_return(df, out_path="figures/avg_return_by_layout.png", test="wilcoxon"
     print(f"Saved: {out_path}")
 
 
-def plot_survey(df, out_path="figures/avg_survey_by_question.png", test="wilcoxon",
+def plot_survey(df, out_path=None, test="wilcoxon",
                 show_significance=True):
+    if out_path is None:
+        out_path = os.path.join(_PROJ_ROOT, "figures", "avg_survey_by_question.png")
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
 
     if show_significance:
         sig_results = _run_wilcoxon_tests_survey(df, test=test)
         for r in sig_results:
-            direction = "lower" if r["question"] in LOWER_QUESTIONS else "higher"
             print(
-                f"  {r['question']:20s}  CECP {direction} than {r['other_display']:10s}"
+                f"  {r['question']:20s}  CECP vs {r['other_display']:10s}"
                 f"  p={r['p_raw']:.4f}  {r['label']}"
             )
     else:
@@ -623,6 +639,16 @@ def plot_survey(df, out_path="figures/avg_survey_by_question.png", test="wilcoxo
     df["layout"] = df["layout"].map(lambda l: OC_ORIGINAL_LAYOUT_NAMES.get(l, l))
     hue_order = [t for t in DISPLAY_ORDERING if t in df["tag"].unique()]
     question_order = list(QUESTION_LABELS.values())
+
+    # Save data needed to reproduce this figure
+    data_dir = os.path.join(_PROJ_ROOT, "results", "analyze_data")
+    os.makedirs(data_dir, exist_ok=True)
+    df.to_csv(os.path.join(data_dir, "survey_data.csv"), index=False)
+    print(f"Saved: {os.path.join(data_dir, 'survey_data.csv')}")
+    if sig_results:
+        pd.DataFrame(sig_results).to_csv(os.path.join(data_dir, "survey_significance.csv"), index=False)
+        print(f"Saved: {os.path.join(data_dir, 'survey_significance.csv')}")
+
     fig, ax = plt.subplots(figsize=(12, 5))
     sns.barplot(
         data=df,
@@ -670,7 +696,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--data-dir",
         default=None,
-        help="Path to data directory (default: flydata/ next to this script).",
+        help="Path to data directory (default: newflydata/ next to project root).",
     )
     parser.add_argument(
         "--exclude-test",
@@ -678,10 +704,16 @@ if __name__ == "__main__":
         help="Exclude participants whose prolific ID contains 'test'.",
     )
     parser.add_argument(
-        "--test",
+        "--return-test",
+        choices=["wilcoxon", "ttest"],
+        default="ttest",
+        help="Statistical test for return significance brackets (default: ttest).",
+    )
+    parser.add_argument(
+        "--survey-test",
         choices=["wilcoxon", "ttest"],
         default="wilcoxon",
-        help="Statistical test to use for significance brackets (default: wilcoxon).",
+        help="Statistical test for survey significance brackets (default: wilcoxon).",
     )
     parser.add_argument(
         "--both-layouts",
@@ -698,7 +730,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     data_dir = (
-        os.path.join(os.path.dirname(__file__), args.data_dir)
+        os.path.join(_PROJ_ROOT, args.data_dir)
         if args.data_dir
         else DATA_DIR
     )
@@ -747,5 +779,5 @@ if __name__ == "__main__":
     print(f"\nSurvey rows: {len(survey_df)}")
     print(survey_df.groupby(["tag", "question"])["score"].mean().to_string())
 
-    plot_return(gameplay_df, test=args.test, show_both_layouts=args.both_layouts, show_significance=args.significance)
-    plot_survey(survey_df, test=args.test, show_significance=args.significance)
+    plot_return(gameplay_df, test=args.return_test, show_both_layouts=args.both_layouts, show_significance=args.significance)
+    plot_survey(survey_df, test=args.survey_test, show_significance=args.significance)
