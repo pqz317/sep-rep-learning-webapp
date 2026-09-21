@@ -174,9 +174,11 @@ def _load_stage_classifier(agent_id: int) -> tuple[np.ndarray, np.ndarray, list[
 # ---------------------------------------------------------------------------
 # Human-agent slot inference via next-state matching
 #
-# The gameplay logs never record which slot the human occupied — nicewebrl's
-# MultiAgentEnvStage.activate() draws human_id ~ Uniform{0,1} per stage and keeps it
-# in memory only.  We recover it by teacher-forced one-step prediction: from each
+# Gameplay logs from before 2026-09-20 never record which slot the human occupied —
+# nicewebrl's MultiAgentEnvStage.activate() drew human_id ~ Uniform{0,1} per stage and
+# kept it in memory only.  (Since 2026-09-20 the web app fixes human=agent 0 / model=
+# agent 1 and records it in metadata['human_id']; see web_app/constants.py.)
+# We recover it for older data by teacher-forced one-step prediction: from each
 # logged timestep, apply (logged human action, model action) under both slot
 # hypotheses and check which predicted successor state matches the next logged state.
 # Steps where the two hypotheses predict the same successor carry no information and

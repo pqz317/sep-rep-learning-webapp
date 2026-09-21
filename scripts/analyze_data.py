@@ -18,6 +18,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from display_names import DISPLAY_NAMES, OC_ORIGINAL_LAYOUT_NAMES, DISPLAY_ORDERING
 
 _PROJ_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, _PROJ_ROOT)
+from web_app.constants import EXPERIMENT_TAGS
 
 DATA_DIR = os.path.join(_PROJ_ROOT, "newflydata")
 
@@ -152,11 +154,15 @@ def load_test_user_ids(data_dir):
     return {uid for uid, pid in prolific_ids.items() if "test" in pid.lower()}
 
 
-EXPECTED_TAGS = {"fcp", "mep", "oc_cec_v3", "oc_cecp_pred_1000"}
+# A user is complete if they finished every tag in the current experiment, or every
+# tag in the original 4-tag experiment (data collected before comedi_br / pace_br
+# were added on 2026-09-21).
+EXPECTED_TAGS = set(EXPERIMENT_TAGS)
+LEGACY_EXPECTED_TAGS = {"fcp", "mep", "oc_cec_v3", "oc_cecp_pred_1000"}
 
 
 def load_incomplete_user_ids(data_dir):
-    """Return a set of user IDs that are missing one or more of the 4 expected survey tags."""
+    """Return a set of user IDs that are missing one or more of the expected survey tags."""
     all_user_ids = set(load_user_ids(data_dir))
     tags_per_user = {}
     for fname in os.listdir(data_dir):
@@ -166,7 +172,10 @@ def load_incomplete_user_ids(data_dir):
         m_tag = re.search(r"tag=(.+?)(?:_coord_ring|_counter_circuit)", fname)
         if m_uid and m_tag:
             tags_per_user.setdefault(m_uid.group(1), set()).add(m_tag.group(1))
-    return {uid for uid in all_user_ids if tags_per_user.get(uid, set()) != EXPECTED_TAGS}
+    return {
+        uid for uid in all_user_ids
+        if tags_per_user.get(uid, set()) not in (EXPECTED_TAGS, LEGACY_EXPECTED_TAGS)
+    }
 
 
 def _msgpack_records(path):

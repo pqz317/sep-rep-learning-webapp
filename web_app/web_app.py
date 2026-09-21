@@ -3,6 +3,13 @@
 Fixed human-subjects experiment flow:
   consent → demographics → instructions → tutorial → (env + survey) × 2 → finish
 
+Agent slots:
+  The human always controls agent 0 (red) and the model always controls agent 1
+  (blue) — see HUMAN_AGENT_ID / MODEL_AGENT_ID in web_app/constants.py.  Both
+  ids are written to every gameplay record's metadata and to the final
+  episode_metadata.  Before 2026-09-20 the slot was drawn randomly per stage by
+  nicewebrl and not logged; analysis of that older data has to infer it.
+
 Usage:
     python -m web_app.web_app
     # or
@@ -57,7 +64,12 @@ from web_app.experiment import (
     build_experiment_block,
     build_env,
 )
-from web_app.constants import EXPERIMENT_LAYOUTS, EXPERIMENT_TAGS
+from web_app.constants import (
+    EXPERIMENT_LAYOUTS,
+    EXPERIMENT_TAGS,
+    HUMAN_AGENT_ID,
+    MODEL_AGENT_ID,
+)
 
 DATA_DIR = os.environ.get("DATA_DIR", "data")
 HOST = os.environ.get("HOST", "0.0.0.0")
@@ -422,6 +434,8 @@ async def index(client: Client):
         "session_layout": session_layout,
         "tag_agent_pairs": tag_agent_pairs,
         "prolific_id": app.storage.user.get("prolific_id"),
+        "human_id": HUMAN_AGENT_ID,
+        "model_id": MODEL_AGENT_ID,
     }
 
     active_stage = [None]

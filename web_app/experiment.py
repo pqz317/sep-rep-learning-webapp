@@ -154,6 +154,7 @@ from nicewebrl import (
 
 from web_app.adapter import SepRepModelAdapter
 from web_app.model_loader import load_models_for_tag
+from web_app.constants import HUMAN_AGENT_ID, MODEL_AGENT_ID, AGENT_COLORS
 
 ########################################
 # Actions and key mappings (same as CEC example)
@@ -546,6 +547,26 @@ def build_env(layout_name: str, env_name: str) -> dict:
     return result
 
 
+class FixedSlotMultiAgentEnvStage(MultiAgentEnvStage):
+    """MultiAgentEnvStage with a fixed (non-random) human agent slot.
+
+    nicewebrl's MultiAgentEnvStage only writes ``human_id`` / ``human_color`` into
+    user data when ``human_id is None`` (its random-draw branch).  The rest of the
+    library then reads them back from user data — ``step_and_send_timestep`` uses
+    ``human_id`` to pick the model's observation and to route the human's key press
+    to the right agent in ``web_env.next_steps`` — so with an explicit ``human_id``
+    we must populate them ourselves before delegating to ``super().activate``.
+    """
+
+    async def activate(self, container: ui.element):
+        assert self.human_id is not None, "FixedSlotMultiAgentEnvStage requires human_id"
+        await self.set_user_data(
+            human_id=self.human_id,
+            human_color=AGENT_COLORS[self.human_id],
+        )
+        await super().activate(container)
+
+
 def setup_env_stage(
     tag: str,
     layout_name: str,
@@ -557,6 +578,9 @@ def setup_env_stage(
     save_data: bool = True,
 ) -> MultiAgentEnvStage:
     """Load a model and create a MultiAgentEnvStage without wrapping it in Block/Experiment.
+
+    The human always controls agent ``HUMAN_AGENT_ID`` (0, red) and the model always
+    controls agent ``MODEL_AGENT_ID`` (1, blue); see web_app/constants.py.
 
     Args:
         tag: Tracking label (used in stage names and save filenames).
@@ -632,7 +656,7 @@ def setup_env_stage(
     else:
         save_file_fn = lambda: os.devnull
 
-    stage = MultiAgentEnvStage(
+    stage = FixedSlotMultiAgentEnvStage(
         name=f"{stage_name_prefix}_{game_label}",
         web_env=jax_web_env,
         action_keys=action_keys,
@@ -654,7 +678,8 @@ def setup_env_stage(
         using_param_stack=False,
         init_hidden_state_fn=init_hidden_state_fn,
         max_timesteps=MAX_EPISODE_TIMESTEPS,
-        human_id=None,
+        # Fixed slot: human is agent 0, model is agent 1 (was random per stage before 2026-09-20).
+        human_id=HUMAN_AGENT_ID,
     )
     print(f"  Stage '{stage.name}' ready.")
     return stage
@@ -699,7 +724,11 @@ def build_instruction_block(
             tutorial_env_stage,
             post_tutorial_stage,
         ],
-        metadata={"desc": "Instructions & Tutorial"},
+        metadata={
+            "desc": "Instructions & Tutorial",
+            "human_id": HUMAN_AGENT_ID,
+            "model_id": MODEL_AGENT_ID,
+        },
         randomize=False,
     )
 
@@ -730,7 +759,13 @@ def build_experiment_block(
     )
     return Block(
         stages=[env_stage, survey_stage],
-        metadata={"desc": f"{tag} on {session_layout}", "tag": tag, "agent_id": agent_id},
+        metadata={
+            "desc": f"{tag} on {session_layout}",
+            "tag": tag,
+            "agent_id": agent_id,
+            "human_id": HUMAN_AGENT_ID,
+            "model_id": MODEL_AGENT_ID,
+        },
         randomize=False,
     )
 

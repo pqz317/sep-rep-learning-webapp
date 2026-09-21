@@ -159,6 +159,8 @@ def _load_skill_axis(agent_id: int) -> tuple[np.ndarray, np.ndarray]:
 
 # ---------------------------------------------------------------------------
 # Human-agent slot inference via reward matching (same as evaluate_human_action_prediction)
+# Only needed for data collected before 2026-09-20: since then the web app fixes
+# human=agent 0 / model=agent 1 and records it in each record's metadata['human_id'] (see web_app/constants.py).
 # ---------------------------------------------------------------------------
 
 def _recorded_reward(records: list, template_ts) -> float:

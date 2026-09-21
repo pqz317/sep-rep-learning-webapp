@@ -5,11 +5,14 @@ Evaluate how accurately a model's next-state predictions capture human partner a
 For all users with Prolific IDs, replays recorded gameplay episodes with the given model
 tag and evaluates per-timestep action prediction accuracy using the model's predictive head.
 
-The human's game-slot (agent 0 or 1) was randomly assigned each session and not stored in
-the data.  This script infers it by replaying each episode twice — once assuming the human
-was agent 0, once assuming agent 1 — and keeping the hypothesis whose simulated cumulative
-reward matches the recorded reward.  Episodes where neither or both hypotheses match are
-flagged and excluded from downstream analysis.
+For data collected before 2026-09-20 the human's game-slot (agent 0 or 1) was randomly
+assigned each session and not stored in the data.  This script infers it by replaying each
+episode twice — once assuming the human was agent 0, once assuming agent 1 — and keeping the
+hypothesis whose simulated cumulative reward matches the recorded reward.  Episodes where
+neither or both hypotheses match are flagged and excluded from downstream analysis.
+Since 2026-09-20 the web app fixes human=agent 0 / model=agent 1 and records it in each
+record's metadata['human_id'] (see web_app/constants.py), so inference is only needed for
+the older data.
 
 Usage:
     python scripts/evaluate_human_action_prediction.py --tag oc_cecp_pred_1000

@@ -4,6 +4,8 @@ DISPLAY_NAMES: dict[str, str] = {
     "sp": "SP",
     "fcp": "FCP",
     "mep": "MEP",
+    "comedi_br": "CoMeDi",
+    "pace_br": "PACE",
     "oc_cec": "CEC",
     "oc_cecp": "CECP no pred",
     "oc_cecp_pred": "CECP Pred",
@@ -26,4 +28,4 @@ OC_ORIGINAL_LAYOUT_NAMES: dict[str, str] = {
     'forced_coord_9': 'Forced Coordination',
 }
 
-DISPLAY_ORDERING: list[str] = ["SP", "FCP", "MEP","CEC", "CECP"]
+DISPLAY_ORDERING: list[str] = ["SP", "FCP", "MEP", "CoMeDi", "PACE", "CEC", "CECP"]

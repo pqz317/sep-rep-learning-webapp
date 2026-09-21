@@ -23,10 +23,12 @@ DISPLAY_COLORS = {
     "SP": "tab:purple",
     "FCP": "tab:blue",
     "MEP": "tab:orange",
+    "CoMeDi": "tab:brown",
+    "PACE": "tab:pink",
     "CEC": "tab:green",
     "CECP": "tab:red",
 }
-DISPLAY_ORDERING = ["SP", "FCP", "MEP", "CEC", "CECP"]
+DISPLAY_ORDERING = ["SP", "FCP", "MEP", "CoMeDi", "PACE", "CEC", "CECP"]
 
 CROSS_PLAY_LAYOUT_ORDER = [
     "Asymmetric Advantages",

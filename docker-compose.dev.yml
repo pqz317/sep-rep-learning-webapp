@@ -9,5 +9,6 @@ services:
       - .:/app
       - ./data:/data
       - $HOME/sep-rep-learning:/sep-rep-learning
+      - $HOME/.ssh/id_ed25519:/root/.ssh/id_ed25519:ro
     ports:
       - "8889:8080"
