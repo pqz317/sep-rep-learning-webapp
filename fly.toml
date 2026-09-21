@@ -1,21 +1,19 @@
-# fly.toml app configuration file generated for sep-rep-learning-webapp on 2026-04-30T12:57:33-07:00
+# fly.toml app configuration file generated for sep-rep-learning-webapp on 2026-09-21T04:03:02Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
 app = 'sep-rep-learning-webapp'
-primary_region = 'sjc'
+primary_region = 'ams'
 
 [build]
 
 [env]
-  # Set to "1" to log JAX compilation cache misses; unset (or remove) to disable.
-  # JAX_EXPLAIN_CACHE_MISSES = "1"
-  EPISODE_TIMESTEPS=200
+  EPISODE_TIMESTEPS = '200'
 
-[mounts]
-  source = "data"
-  destination = "/app/data" 
+[[mounts]]
+  source = 'data'
+  destination = '/app/data'
 
 [http_service]
   internal_port = 8080
