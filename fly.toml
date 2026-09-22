@@ -13,9 +13,9 @@ primary_region = 'sjc'
   # JAX_EXPLAIN_CACHE_MISSES = "1"
   EPISODE_TIMESTEPS=200
 
-[mounts]
+[[mounts]]
   source = "data"
-  destination = "/app/data" 
+  destination = "/app/data"
 
 [http_service]
   internal_port = 8080
@@ -26,4 +26,5 @@ primary_region = 'sjc'
   processes = ['app']
 
 [[vm]]
-  size = 'performance-8x'
+  size = 'performance-2x'
+  memory = '16gb'

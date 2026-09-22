@@ -7,7 +7,10 @@ RUN pip install --no-cache-dir "jax[cpu]" flax distrax optax
 RUN pip install --no-cache-dir tqdm matplotlib seaborn pandas msgpack imageio aiofiles
 
 # Web app dependencies
-RUN pip install --no-cache-dir nicegui "tortoise-orm<1.0" "nicewebrl @ git+https://github.com/KempnerInstitute/nicewebrl.git"
+# nicewebrl pinned to e30aca8 (2026-01-14): the next upstream commit (cdc6822, 2026-08-31)
+# has an inverted None-check in stages.save_stage_state that raises
+# "TypeError: 'NoneType' object is not callable" and silently drops stage-state saves.
+RUN pip install --no-cache-dir nicegui "tortoise-orm<1.0" "nicewebrl @ git+https://github.com/KempnerInstitute/nicewebrl.git@e30aca8c6b25bfde55a338779fd0181db72d10e6"
 
 # Overcooked environments
 RUN git clone --depth=1 https://github.com/pqz317/crossEnvCooperation.git /src/crossEnvCooperation && \
