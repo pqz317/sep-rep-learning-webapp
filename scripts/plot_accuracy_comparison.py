@@ -5,20 +5,26 @@ combined bar chart with mean ± SD error bars.
 import argparse
 import json
 import os
+import sys
 
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from constants import DEFAULT_DATASET, RESULTS_DIR, SEP_REP_RESULTS_DIR
+
 AI_SUMMARY = os.path.join(
-    os.path.dirname(__file__),
-    "../../sep-rep-learning/results/evaluate_action_prediction/hksyr2i5/summary.json",
+    SEP_REP_RESULTS_DIR,
+    "evaluate_action_prediction/hksyr2i5/summary.json",
 )
-HUMAN_SUMMARY = os.path.join(
-    os.path.dirname(__file__),
-    "../results/evaluate_human_action_prediction/oc_cecp_pred_1000/summary.json",
-)
+DEFAULT_TAG = "oc_cecp_pred_1000"
+
+
+def human_results_dir(dataset, tag):
+    """Where evaluate_human_action_prediction.py writes its results for a dataset."""
+    return os.path.join(RESULTS_DIR, "evaluate_human_action_prediction", dataset, tag)
 
 
 def load_data(ai_path, human_path):
@@ -86,19 +92,30 @@ if __name__ == "__main__":
         help="Path to AI partners summary.json.",
     )
     parser.add_argument(
+        "--dataset",
+        default=DEFAULT_DATASET,
+        help=f"Which evaluate_human_action_prediction run to read (default: {DEFAULT_DATASET}).",
+    )
+    parser.add_argument(
+        "--tag",
+        default=DEFAULT_TAG,
+        help=f"Agent tag of that run (default: {DEFAULT_TAG}).",
+    )
+    parser.add_argument(
         "--human-summary",
-        default=HUMAN_SUMMARY,
-        help="Path to human subjects summary.json.",
+        default=None,
+        help="Path to human subjects summary.json (default: derived from --dataset/--tag).",
     )
     parser.add_argument(
         "--out",
-        default=os.path.join(
-            os.path.dirname(__file__),
-            "../results/evaluate_human_action_prediction/oc_cecp_pred_1000/accuracy_comparison.png",
-        ),
-        help="Output path for the figure.",
+        default=None,
+        help="Output path for the figure (default: alongside the human summary).",
     )
     args = parser.parse_args()
 
-    df, chance_level = load_data(args.ai_summary, args.human_summary)
-    plot(df, chance_level, args.out)
+    results_dir = human_results_dir(args.dataset, args.tag)
+    human_summary = args.human_summary or os.path.join(results_dir, "summary.json")
+    out_path = args.out or os.path.join(results_dir, "accuracy_comparison.png")
+
+    df, chance_level = load_data(args.ai_summary, human_summary)
+    plot(df, chance_level, out_path)

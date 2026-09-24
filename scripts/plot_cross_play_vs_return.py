@@ -1,6 +1,9 @@
 """Side-by-side comparison: cross-play returns (left) and human-study returns (right), shared y-axis."""
 
+import argparse
 import os
+import sys
+
 import numpy as np
 import pandas as pd
 import matplotlib
@@ -8,16 +11,25 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
-_PROJ_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-_SEP_REP_ROOT = "/sep-rep-learning"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from constants import DEFAULT_DATASET, FIGURES_DIR, RESULTS_DIR, SEP_REP_RESULTS_DIR
+from display_names import DISPLAY_ORDERING
 
 CROSS_PLAY_CSV = os.path.join(
-    _SEP_REP_ROOT,
-    "results/evaluate_cross_play/overcooked/cross_play_barplot_original_layouts_by_model_summary.csv",
+    SEP_REP_RESULTS_DIR,
+    "evaluate_cross_play/overcooked/cross_play_barplot_original_layouts_by_model_summary.csv",
 )
-RETURN_DATA_CSV = os.path.join(_PROJ_ROOT, "results/analyze_data/return_data.csv")
-RETURN_SIG_CSV = os.path.join(_PROJ_ROOT, "results/analyze_data/return_significance.csv")
-OUT_PATH = os.path.join(_PROJ_ROOT, "figures/cross_play_vs_return.png")
+
+
+def return_csv_paths(dataset):
+    """analyze_data.py's per-dataset return CSVs, and where this figure belongs."""
+    base = os.path.join(RESULTS_DIR, "analyze_data", dataset)
+    return (
+        os.path.join(base, "return_data.csv"),
+        os.path.join(base, "return_significance.csv"),
+        os.path.join(FIGURES_DIR, dataset, "cross_play_vs_return.png"),
+    )
+
 
 DISPLAY_COLORS = {
     "SP": "tab:purple",
@@ -28,7 +40,6 @@ DISPLAY_COLORS = {
     "CEC": "tab:green",
     "CECP": "tab:red",
 }
-DISPLAY_ORDERING = ["SP", "FCP", "MEP", "CoMeDi", "PACE", "CEC", "CECP"]
 
 CROSS_PLAY_LAYOUT_ORDER = [
     "Asymmetric Advantages",
@@ -133,9 +144,19 @@ def _plot_return(ax, df, sig_df, layout_order, bar_width):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--dataset",
+        default=DEFAULT_DATASET,
+        help=f"Which analyze_data.py run to plot (default: {DEFAULT_DATASET}).",
+    )
+    args = parser.parse_args()
+
+    return_data_csv, return_sig_csv, out_path = return_csv_paths(args.dataset)
+
     cross_df = pd.read_csv(CROSS_PLAY_CSV)
-    return_df = pd.read_csv(RETURN_DATA_CSV)
-    sig_df = pd.read_csv(RETURN_SIG_CSV) if os.path.exists(RETURN_SIG_CSV) else None
+    return_df = pd.read_csv(return_data_csv)
+    sig_df = pd.read_csv(return_sig_csv) if os.path.exists(return_sig_csv) else None
 
     cross_layout_order = [l for l in CROSS_PLAY_LAYOUT_ORDER if l in cross_df["layout"].values]
     return_layout_order = [l for l in RETURN_LAYOUT_ORDER if l in return_df["layout"].values]
@@ -164,11 +185,11 @@ def main():
     fig.legend(handles=handles, title="Model", loc="lower center",
                ncol=len(hue_order), bbox_to_anchor=(0.5, -0.02))
 
-    os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
-    fig.savefig(OUT_PATH, dpi=150, bbox_inches="tight")
-    fig.savefig(OUT_PATH.replace(".png", ".svg"), bbox_inches="tight")
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    fig.savefig(out_path, dpi=150, bbox_inches="tight")
+    fig.savefig(out_path.replace(".png", ".svg"), bbox_inches="tight")
     plt.close(fig)
-    print(f"Saved: {OUT_PATH}")
+    print(f"Saved: {out_path}")
 
 
 if __name__ == "__main__":

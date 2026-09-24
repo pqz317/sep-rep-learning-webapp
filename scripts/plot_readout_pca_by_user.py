@@ -29,23 +29,30 @@ from flax import serialization
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from analyze_data import LIKERT_SCALE
+from analyze_data import add_exclude_bad_users_arg, load_bad_user_ids
+from constants import (
+    ACTION_ARRAY,
+    DATA_DIR,
+    LIKERT_SCALE,
+    MODELS_DIR,
+    OBS_KEY,
+    REWARD_MATCH_TOL,
+    dataset_results_dir,
+    resolve_data_dir,
+)
 from coop_foraging_scripts.evaluation_utils import load_model_checkpoint
+from human_slot import recorded_human_agent
 from nicewebrl.utils import read_all_records_sync
 from nicewebrl.nicejax import TimestepWrapper
 from web_app.constants import ORIGINAL_5_TAGS
 from web_app.experiment import create_environment
 
-DEFAULT_DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "newflydata")
-DEFAULT_MODELS_DIR = os.environ.get("MODELS_DIR", "/app/models")
-DEFAULT_SUMMARY_CSV = os.path.join(os.path.dirname(__file__), "..", "results", "user_episode_summary.csv")
-DEFAULT_OUTPUT_DIR = "./results/readout_pca_by_user"
-
-OBS_KEY = 'grid_2d'
-REWARD_MATCH_TOL = 0.5
-ACTION_ARRAY = [3, 1, 2, 0, 4, 5]
+DEFAULT_DATA_DIR = DATA_DIR
+DEFAULT_MODELS_DIR = MODELS_DIR
+DEFAULT_OUTPUT_DIR = None   # derived from the dataset in main()
 
 # Ordered experience labels for consistent coloring
 EXPERIENCE_ORDER = ["Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree", "N/A"]
@@ -249,11 +256,13 @@ def replay_episode_for_readouts(
         if "data" in r and "timestep" in r.get("data", {})
     ]
 
-    human_agent, is_ambiguous = _infer_human_agent(
-        filepath, records, template_ts, step_fn, model_fn, model_state
-    )
-    if is_ambiguous:
-        return None
+    human_agent = recorded_human_agent(records)
+    if human_agent is None:
+        human_agent, is_ambiguous = _infer_human_agent(
+            filepath, records, template_ts, step_fn, model_fn, model_state
+        )
+        if is_ambiguous:
+            return None
 
     model_agent_key = f"agent_{1 - human_agent}"
     ac = model_fn.actor_critic_fn
@@ -435,24 +444,42 @@ def main():
                         help="Agent tag to analyze (default: oc_cecp_pred_1000).")
     parser.add_argument("--agent-id", type=int, default=2,
                         help="Agent ID within the tag (default: 2).")
-    parser.add_argument("--summary-csv", default=DEFAULT_SUMMARY_CSV,
-                        help="Path to user_episode_summary.csv.")
+    parser.add_argument("--summary-csv", default=None,
+                        help="Path to user_episode_summary.csv "
+                             "(default: results/<dataset>/user_episode_summary.csv).")
     parser.add_argument("--data-dir", default=DEFAULT_DATA_DIR,
-                        help="Directory containing gameplay JSON files.")
+                        help="Dataset name ('resub', 'newflydata') or path to a directory "
+                             "of gameplay JSON files.")
     parser.add_argument("--models-dir", default=DEFAULT_MODELS_DIR,
                         help="Directory containing model checkpoints.")
-    parser.add_argument("--output-dir", default=DEFAULT_OUTPUT_DIR)
+    parser.add_argument("--output-dir", default=DEFAULT_OUTPUT_DIR,
+                        help="Override the default results/<name>/<dataset>/ output directory.")
     parser.add_argument("--num-pcs", type=int, default=10,
                         help="Number of principal components to compute (default: 10).")
     parser.add_argument("--subsample-n", type=int, default=30,
                         help="Max trajectories per class to show in individual-trace plot (default: 30).")
     parser.add_argument("--no-plots", action="store_true")
     parser.add_argument("--verbose", action="store_true")
+    add_exclude_bad_users_arg(parser)
     args = parser.parse_args()
+
+    # Resolve the dataset and namespace outputs by it, so runs on different
+    # data collections do not overwrite each other.
+    args.data_dir = resolve_data_dir(args.data_dir)
+    if args.output_dir is None:
+        args.output_dir = dataset_results_dir("readout_pca_by_user", data_dir=args.data_dir)
+    if args.summary_csv is None:
+        args.summary_csv = os.path.join(
+            dataset_results_dir(data_dir=args.data_dir), "user_episode_summary.csv"
+        )
+    print(f"Data directory: {args.data_dir}")
+    print(f"Output directory: {args.output_dir}")
 
     # Load summary CSV and filter to target tag + agent_id
     summary_rows = load_summary_csv(args.summary_csv)
     target_rows = filter_summary(summary_rows, args.tag, args.agent_id)
+    bad_ids = load_bad_user_ids(args.data_dir, args.exclude_bad_users)
+    target_rows = [r for r in target_rows if r['user_id'] not in bad_ids]
     if not target_rows:
         print(f"No rows in CSV for tag={args.tag!r} agent_id={args.agent_id}.")
         sys.exit(1)

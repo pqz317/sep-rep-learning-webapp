@@ -5,18 +5,18 @@ Evaluate how accurately a model's next-state predictions capture human partner a
 For all users with Prolific IDs, replays recorded gameplay episodes with the given model
 tag and evaluates per-timestep action prediction accuracy using the model's predictive head.
 
-For data collected before 2026-09-20 the human's game-slot (agent 0 or 1) was randomly
-assigned each session and not stored in the data.  This script infers it by replaying each
-episode twice — once assuming the human was agent 0, once assuming agent 1 — and keeping the
-hypothesis whose simulated cumulative reward matches the recorded reward.  Episodes where
-neither or both hypotheses match are flagged and excluded from downstream analysis.
 Since 2026-09-20 the web app fixes human=agent 0 / model=agent 1 and records it in each
-record's metadata['human_id'] (see web_app/constants.py), so inference is only needed for
-the older data.
+record's metadata['human_id'] (see web_app/constants.py), which this script reads directly.
+
+For data collected before then the human's game-slot (agent 0 or 1) was randomly assigned
+each session and not stored, so it is inferred instead by replaying each episode twice —
+once assuming the human was agent 0, once assuming agent 1 — and keeping the hypothesis
+whose simulated cumulative reward matches the recorded reward.  Episodes where neither or
+both hypotheses match are flagged and excluded from downstream analysis.
 
 Usage:
     python scripts/evaluate_human_action_prediction.py --tag oc_cecp_pred_1000
-    python scripts/evaluate_human_action_prediction.py --tag oc_cecp_pred_1000 --data-dir newflydata
+    python scripts/evaluate_human_action_prediction.py --tag oc_cecp_pred_1000 --data-dir prolific_data/newflydata
 """
 
 import argparse
@@ -34,6 +34,7 @@ if not hasattr(jax, "tree_map"):
 import jax.numpy as jnp
 import matplotlib
 import numpy as np
+import pandas as pd
 from flax import serialization
 from scipy.stats import pearsonr, linregress
 
@@ -41,28 +42,40 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from analyze_data import load_valid_users
+from analyze_data import add_exclude_bad_users_arg, load_bad_user_ids, load_valid_users
+from constants import (
+    ACTION_ARRAY,
+    DATA_DIR,
+    MODELS_DIR,
+    OBS_KEY,
+    REWARD_MATCH_TOL,
+    SEP_REP_RESULTS_DIR,
+    dataset_results_dir,
+    resolve_data_dir,
+)
 from coop_foraging_scripts.evaluation_utils import load_model_checkpoint, write_csv
+from human_slot import recorded_human_agent
 from nicewebrl.utils import read_all_records_sync
 from nicewebrl.nicejax import TimestepWrapper
 from web_app.constants import ORIGINAL_5_TAGS
 from web_app.experiment import create_environment
 
-DEFAULT_DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "newflydata")
-DEFAULT_MODELS_DIR = os.environ.get("MODELS_DIR", "/app/models")
-DEFAULT_OUTPUT_DIR = "./results/evaluate_human_action_prediction"
+DEFAULT_DATA_DIR = DATA_DIR
+DEFAULT_MODELS_DIR = MODELS_DIR
+DEFAULT_OUTPUT_DIR = None   # derived from the dataset in main()
+
+# AI-partner action-prediction summary (companion repo), used for the
+# AI-vs-human accuracy comparison panel.
+DEFAULT_AI_SUMMARY = os.path.join(
+    SEP_REP_RESULTS_DIR,
+    "evaluate_action_prediction/hksyr2i5/summary.json",
+)
 
 ACTION_NAMES_5CLASS = ['right', 'down', 'left', 'up', 'no-move']
 NUM_ACTION_CLASSES = len(ACTION_NAMES_5CLASS)
-OBS_KEY = 'grid_2d'
-REWARD_MATCH_TOL = 0.5   # tolerance for comparing simulated vs recorded reward
-
-# Keyboard-index → game-engine action mapping (from web_app/experiment.py).
-# action_idx in records is a keyboard index 0-5 ('up','down','left','right','stay','interact');
-# env.step expects the remapped game action via this array.
-ACTION_ARRAY = [3, 1, 2, 0, 4, 5]
 
 
 # ---------------------------------------------------------------------------
@@ -422,29 +435,133 @@ def _plot_per_class_accuracy(per_class_per_timestep: np.ndarray, output_path: st
     plt.close(fig)
 
 
-def _plot_return_vs_accuracy_scatter(
+# Publication figures (AI-vs-human comparison + return-vs-accuracy scatter)
+# are drawn at a uniform, deliberately large font size.
+FIGURE_FONT_SIZE = 18
+FIGURE_RC = {
+    'font.size': FIGURE_FONT_SIZE,
+    'axes.titlesize': FIGURE_FONT_SIZE,
+    'axes.labelsize': FIGURE_FONT_SIZE,
+    'xtick.labelsize': FIGURE_FONT_SIZE,
+    'ytick.labelsize': FIGURE_FONT_SIZE,
+    'legend.fontsize': FIGURE_FONT_SIZE,
+}
+
+COMPARISON_GROUPS = ['Best AI\nPartners', 'Human\nSubjects']
+
+
+def _accuracy_comparison_df(
+    ai_summary_path: str,
+    human_accuracies: list[float],
+) -> tuple[pd.DataFrame, float]:
+    """Tidy AI-partner vs human-subject accuracies, plus the AI run's chance level."""
+    with open(ai_summary_path) as f:
+        ai = json.load(f)
+
+    rows = (
+        [{'group': COMPARISON_GROUPS[0], 'accuracy': float(v)}
+         for v in ai['per_partner_accuracy'].values()]
+        + [{'group': COMPARISON_GROUPS[1], 'accuracy': float(v)}
+           for v in human_accuracies]
+    )
+    return pd.DataFrame(rows), float(ai['chance_level'])
+
+
+def _draw_accuracy_comparison(ax, df: pd.DataFrame, chance_level: float) -> None:
+    sns.barplot(
+        data=df,
+        x='group',
+        y='accuracy',
+        order=COMPARISON_GROUPS,
+        errorbar='sd',
+        capsize=0.15,
+        width=0.65,
+        ax=ax,
+    )
+    ax.axhline(chance_level, linestyle='--', color='gray', linewidth=1.5,
+               label=f'Chance ({chance_level:.2f})')
+    ax.set_xlabel('')
+    ax.set_ylabel('Prediction Accuracy')
+    ax.set_ylim(0, 0.6)
+    ax.legend(loc='upper center', frameon=False, handlelength=1.2,
+              borderaxespad=0.2, handletextpad=0.5)
+
+
+def _draw_return_vs_accuracy_scatter(
+    ax,
     normalized_returns: np.ndarray,
     accuracies: np.ndarray,
-    output_path: str,
 ) -> None:
     r, p = pearsonr(normalized_returns, accuracies)
     slope, intercept, _, _, _ = linregress(normalized_returns, accuracies)
 
     x_line = np.linspace(normalized_returns.min(), normalized_returns.max(), 200)
-
     p_str = f'p = {p:.3f}' if p >= 0.001 else 'p < 0.001'
 
-    fig, ax = plt.subplots(figsize=(5, 5), constrained_layout=True)
-    ax.scatter(normalized_returns, accuracies, alpha=0.75, edgecolors='white', linewidth=0.5)
-    ax.plot(x_line, slope * x_line + intercept, color='firebrick', linewidth=1.5)
-    ax.set_xlabel('Normalized Per-Epsidoe Return')
+    ax.scatter(normalized_returns, accuracies, s=60, alpha=0.75,
+               edgecolors='white', linewidth=0.5)
+    ax.plot(x_line, slope * x_line + intercept, color='firebrick', linewidth=2.0,
+            label=f"Pearson's r = {r:.3f}")
+    # Second legend row carries the p-value with no handle of its own.
+    ax.plot([], [], ' ', label=p_str)
+    ax.set_xlabel('Normalized Per-Episode Return')
     ax.set_ylabel('Prediction Accuracy')
-    ax.set_title(f"Human subject performance vs. CECP's movement prediction\nPearson's r = {r:.3f}, {p_str}")
     ax.grid(alpha=0.25)
+    ax.legend(loc='best', frameon=True, handlelength=1.5, handletextpad=0.5,
+              labelspacing=0.3, borderpad=0.3)
 
+
+def _save(fig, output_path: str) -> None:
+    os.makedirs(os.path.dirname(output_path) or '.', exist_ok=True)
     fig.savefig(output_path, dpi=150)
     fig.savefig(os.path.splitext(output_path)[0] + '.svg')
     plt.close(fig)
+    print(f'Saved: {output_path}')
+
+
+def _plot_accuracy_comparison(
+    df: pd.DataFrame,
+    chance_level: float,
+    output_path: str,
+) -> None:
+    with plt.rc_context(FIGURE_RC):
+        fig, ax = plt.subplots(figsize=(3.6, 6), constrained_layout=True)
+        _draw_accuracy_comparison(ax, df, chance_level)
+        _save(fig, output_path)
+
+
+def _plot_return_vs_accuracy_scatter(
+    normalized_returns: np.ndarray,
+    accuracies: np.ndarray,
+    output_path: str,
+) -> None:
+    with plt.rc_context(FIGURE_RC):
+        fig, ax = plt.subplots(figsize=(7, 6), constrained_layout=True)
+        _draw_return_vs_accuracy_scatter(ax, normalized_returns, accuracies)
+        _save(fig, output_path)
+
+
+def _plot_combined_prediction_figure(
+    df: pd.DataFrame,
+    chance_level: float,
+    normalized_returns: np.ndarray,
+    accuracies: np.ndarray,
+    output_path: str,
+) -> None:
+    """AI-vs-human accuracy bars (left) beside the return-vs-accuracy scatter (right)."""
+    with plt.rc_context(FIGURE_RC):
+        fig, (ax_bar, ax_scatter) = plt.subplots(
+            1, 2,
+            figsize=(10, 6),
+            sharey=True,
+            gridspec_kw={'width_ratios': [1, 2]},
+            constrained_layout=True,
+        )
+        _draw_accuracy_comparison(ax_bar, df, chance_level)
+        _draw_return_vs_accuracy_scatter(ax_scatter, normalized_returns, accuracies)
+        # Shared y-axis: the left panel carries the label and tick labels.
+        ax_scatter.set_ylabel('')
+        _save(fig, output_path)
 
 
 # ---------------------------------------------------------------------------
@@ -485,12 +602,14 @@ def replay_episode_for_prediction(
         if "data" in r and "timestep" in r.get("data", {})
     ]
 
-    # --- Infer which game slot the human occupied ---
-    human_agent, is_ambiguous = infer_human_agent(
-        filepath, records, template_ts, step_fn, model_fn, model_state
-    )
-    if is_ambiguous:
-        return None
+    # --- Which game slot did the human occupy? Read it, or infer it for old data ---
+    human_agent = recorded_human_agent(records)
+    if human_agent is None:
+        human_agent, is_ambiguous = infer_human_agent(
+            filepath, records, template_ts, step_fn, model_fn, model_state
+        )
+        if is_ambiguous:
+            return None
 
     model_agent_key = f"agent_{1 - human_agent}"
     ac = model_fn.actor_critic_fn
@@ -581,7 +700,8 @@ def main():
     )
     parser.add_argument(
         "--data-dir", default=DEFAULT_DATA_DIR,
-        help=f"Directory containing gameplay files (default: {DEFAULT_DATA_DIR}).",
+        help=f"Dataset name ('resub', 'newflydata') or path to a data directory "
+             f"(default: {DEFAULT_DATA_DIR}).",
     )
     parser.add_argument(
         "--models-dir", default=DEFAULT_MODELS_DIR,
@@ -591,11 +711,27 @@ def main():
         "--output-dir", default=DEFAULT_OUTPUT_DIR,
         help=f"Root directory for output files (default: {DEFAULT_OUTPUT_DIR}).",
     )
+    parser.add_argument(
+        "--ai-summary", default=DEFAULT_AI_SUMMARY,
+        help=f"AI-partner action-prediction summary.json used for the AI-vs-human "
+             f"comparison panel (default: {DEFAULT_AI_SUMMARY}).",
+    )
     parser.add_argument("--no-plots", action="store_true", help="Skip saving plots.")
     parser.add_argument("--verbose", action="store_true")
+    add_exclude_bad_users_arg(parser)
     args = parser.parse_args()
 
+    # Resolve the dataset and namespace outputs by it, so runs on different
+    # data collections do not overwrite each other.
+    args.data_dir = resolve_data_dir(args.data_dir)
+    if args.output_dir is None:
+        args.output_dir = dataset_results_dir("evaluate_human_action_prediction", data_dir=args.data_dir)
+    print(f"Data directory: {args.data_dir}")
+    print(f"Output directory: {args.output_dir}")
+
     prolific_users = load_valid_users(args.data_dir)
+    bad_ids = load_bad_user_ids(args.data_dir, args.exclude_bad_users)
+    prolific_users = {uid: pid for uid, pid in prolific_users.items() if uid not in bad_ids}
     if not prolific_users:
         print(f"No users with msgpack files found in {args.data_dir}")
         sys.exit(1)
@@ -725,6 +861,29 @@ def main():
             accuracies=ep_accuracies,
             output_path=os.path.join(output_dir, 'return_vs_accuracy_scatter.png'),
         )
+
+        # AI-vs-human comparison, on its own and combined with the scatter.
+        # Needs the companion repo's AI evaluation, which may not be present.
+        if os.path.exists(args.ai_summary):
+            human_accuracies = [float(acc.mean()) for acc in per_user_accuracy]
+            comparison_df, chance_level = _accuracy_comparison_df(
+                args.ai_summary, human_accuracies,
+            )
+            _plot_accuracy_comparison(
+                df=comparison_df,
+                chance_level=chance_level,
+                output_path=os.path.join(output_dir, 'accuracy_comparison.png'),
+            )
+            _plot_combined_prediction_figure(
+                df=comparison_df,
+                chance_level=chance_level,
+                normalized_returns=normalized_returns,
+                accuracies=ep_accuracies,
+                output_path=os.path.join(output_dir, 'accuracy_comparison_and_return.png'),
+            )
+        else:
+            print(f"AI summary not found at {args.ai_summary}; "
+                  f"skipping accuracy-comparison figures.")
 
     summary = {
         'tag': args.tag,

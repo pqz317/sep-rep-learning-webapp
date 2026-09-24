@@ -43,22 +43,33 @@ from flax import serialization
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from analyze_data import load_valid_users, load_overcooked_experience, LIKERT_SCALE
+from analyze_data import add_exclude_bad_users_arg, load_bad_user_ids, load_valid_users, load_overcooked_experience
+from constants import (
+    ACTION_ARRAY,
+    DATA_DIR,
+    LIKERT_SCALE,
+    MODELS_DIR,
+    OBS_KEY,
+    SEP_REP_RESULTS_DIR,
+    dataset_results_dir,
+    resolve_data_dir,
+)
 from coop_foraging_scripts.evaluation_utils import load_model_checkpoint, write_csv
+from human_slot import recorded_human_agent
 from nicewebrl.utils import read_all_records_sync
 from nicewebrl.nicejax import TimestepWrapper
 from web_app.constants import EXPERIMENT_TAGS, ORIGINAL_5_TAGS
 from web_app.experiment import create_environment
 
-DEFAULT_DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "newflydata")
-DEFAULT_MODELS_DIR = os.environ.get("MODELS_DIR", "/app/models")
-DEFAULT_OUTPUT_DIR = "./results/evaluate_skill_class"
-STAGE_CLASSIFIER_BASE_DIR = "/sep-rep-learning/results/evaluate_skill_decoding/hksyr2i5"
-
-OBS_KEY = 'grid_2d'
-ACTION_ARRAY = [3, 1, 2, 0, 4, 5]
+DEFAULT_DATA_DIR = DATA_DIR
+DEFAULT_MODELS_DIR = MODELS_DIR
+DEFAULT_OUTPUT_DIR = None   # derived from the dataset in main()
+STAGE_CLASSIFIER_BASE_DIR = os.path.join(
+    SEP_REP_RESULTS_DIR, "evaluate_skill_decoding", "hksyr2i5"
+)
 
 # Slot inference: state fields compared, and how well the winning hypothesis must do.
 # Static fields (wall_map, goal_pos, pot_pos) and fields that move identically under both
@@ -172,12 +183,13 @@ def _load_stage_classifier(agent_id: int) -> tuple[np.ndarray, np.ndarray, list[
 
 
 # ---------------------------------------------------------------------------
-# Human-agent slot inference via next-state matching
+# Human-agent slot inference via next-state matching — fallback for old data only
 #
 # Gameplay logs from before 2026-09-20 never record which slot the human occupied —
 # nicewebrl's MultiAgentEnvStage.activate() drew human_id ~ Uniform{0,1} per stage and
 # kept it in memory only.  (Since 2026-09-20 the web app fixes human=agent 0 / model=
-# agent 1 and records it in metadata['human_id']; see web_app/constants.py.)
+# agent 1 and records it in metadata['human_id']; see web_app/constants.py.)  Where that
+# key is present, recorded_human_agent() reads it and none of this code runs.
 # We recover it for older data by teacher-forced one-step prediction: from each
 # logged timestep, apply (logged human action, model action) under both slot
 # hypotheses and check which predicted successor state matches the next logged state.
@@ -367,11 +379,13 @@ def replay_episode_for_skill_class(
         if "data" in r and "timestep" in r.get("data", {})
     ]
 
-    human_agent, is_ambiguous = _infer_human_agent(
-        filepath, records, template_ts, step_fn, model_fn, model_state
-    )
-    if is_ambiguous:
-        return None
+    human_agent = recorded_human_agent(records)
+    if human_agent is None:
+        human_agent, is_ambiguous = _infer_human_agent(
+            filepath, records, template_ts, step_fn, model_fn, model_state
+        )
+        if is_ambiguous:
+            return None
 
     model_agent_key = f"agent_{1 - human_agent}"
     ac = model_fn.actor_critic_fn
@@ -465,24 +479,39 @@ def _plot_metric_by_class(
     class_names: list[str],
     values_by_class: dict[str, np.ndarray],
     y_label: str,
-    title: str,
+    title: str | None,
     output_path: str,
     form: str = "bar",
     ylim: tuple[float, float] | None = None,
+    fontsize: float | None = None,
+    figsize: tuple[float, float] = (5, 4.5),
+    point_size: float = 14,
+    stack_label: bool = False,
+    x_label: str = "Model-predicted partner skill class",
 ) -> None:
     """Mean +/- SEM of a per-episode metric, split by predicted skill class.
 
     form='bar' for magnitudes measured from zero (returns); form='dot' for bounded
     ordinal scales like the 1-5 Likert, where a zero baseline is meaningless and a
-    truncated bar would misstate the effect size.
+    truncated bar would misstate the effect size. title=None omits the title;
+    fontsize, if given, applies to every text element in the figure. stack_label puts
+    the mean and n on separate lines, for narrow figures with large fonts.
     """
+    rc = {'font.size': fontsize} if fontsize is not None else {}
+    with plt.rc_context(rc):
+        _draw_metric_by_class(class_names, values_by_class, y_label, title, output_path,
+                              form, ylim, fontsize, figsize, point_size, stack_label, x_label)
+
+
+def _draw_metric_by_class(class_names, values_by_class, y_label, title, output_path,
+                          form, ylim, fontsize, figsize, point_size, stack_label, x_label) -> None:
     stats = [_mean_sem(values_by_class.get(n, np.array([]))) for n in class_names]
     means = [s[0] for s in stats]
     sems = [s[1] for s in stats]
     x = np.arange(len(class_names))
     colors = [CLASS_COLORS[i % len(CLASS_COLORS)] for i in range(len(class_names))]
 
-    fig, ax = plt.subplots(figsize=(5, 4.5), constrained_layout=True)
+    fig, ax = plt.subplots(figsize=figsize, constrained_layout=True)
     if form == "bar":
         ax.bar(
             x, means, width=0.62, yerr=sems, capsize=4,
@@ -490,8 +519,8 @@ def _plot_metric_by_class(
         )
     else:
         for xi, m, s, c in zip(x, means, sems, colors):
-            ax.errorbar(xi, m, yerr=s, fmt='o', markersize=10, color=c,
-                        ecolor=c, elinewidth=2, capsize=5,
+            ax.errorbar(xi, m, yerr=s, fmt='o', markersize=13, color=c,
+                        ecolor=c, elinewidth=3, capsize=6, capthick=3,
                         markeredgecolor='white', markeredgewidth=1.2, zorder=4)
 
     rng = np.random.default_rng(0)
@@ -499,24 +528,26 @@ def _plot_metric_by_class(
         vals = values_by_class.get(name, np.array([]))
         if len(vals):
             jitter = (rng.random(len(vals)) - 0.5) * 0.3
-            ax.scatter(xi + jitter, vals, s=14, color='#52514e', alpha=0.45, zorder=3, linewidths=0)
+            ax.scatter(xi + jitter, vals, s=point_size, color='#52514e', alpha=0.45, zorder=3, linewidths=0)
 
     # Anchor the label above the error-bar cap so it never sits on the whisker.
     for xi, name, m, s in zip(x, class_names, means, sems):
         n = len(values_by_class.get(name, np.array([])))
         if not np.isnan(m):
             top = m + (s if not np.isnan(s) else 0.0)
-            ax.annotate(f"{m:.2f}  n={n}", (xi, top), textcoords="offset points",
-                        xytext=(0, 9), ha='center', fontsize=9, color='#0b0b0b')
+            sep = "\n" if stack_label else "  "
+            ax.annotate(f"{m:.2f}{sep}n={n}", (xi, top), textcoords="offset points",
+                        xytext=(0, 9), ha='center', fontsize=fontsize or 9, color='#0b0b0b')
 
     ax.set_xticks(x)
     ax.set_xticklabels([n.capitalize() for n in class_names])
     ax.set_xlim(-0.6, len(class_names) - 0.4)
     if ylim is not None:
         ax.set_ylim(*ylim)
-    ax.set_xlabel("Model-predicted partner skill class")
+    ax.set_xlabel(x_label)
     ax.set_ylabel(y_label)
-    ax.set_title(title)
+    if title:
+        ax.set_title(title)
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
     ax.grid(axis='y', alpha=0.25)
@@ -599,9 +630,11 @@ def main():
     )
     parser.add_argument("--tag", required=True,
                         help="Experiment tag, e.g. oc_cecp_pred_1000.")
-    parser.add_argument("--data-dir", default=DEFAULT_DATA_DIR)
+    parser.add_argument("--data-dir", default=DEFAULT_DATA_DIR,
+                        help="Dataset name ('resub', 'newflydata') or path to a data directory.")
     parser.add_argument("--models-dir", default=DEFAULT_MODELS_DIR)
-    parser.add_argument("--output-dir", default=DEFAULT_OUTPUT_DIR)
+    parser.add_argument("--output-dir", default=DEFAULT_OUTPUT_DIR,
+                        help="Override the default results/<name>/<dataset>/ output directory.")
     parser.add_argument("--latent-start-t", type=int, default=50,
                         help="Start of timestep window for averaging class scores (inclusive, default 50).")
     parser.add_argument("--latent-end-t", type=int, default=100,
@@ -616,9 +649,20 @@ def main():
             "The skill class is still predicted from the --tag episode's replay."
         ),
     )
+    add_exclude_bad_users_arg(parser)
     args = parser.parse_args()
 
+    # Resolve the dataset and namespace outputs by it, so runs on different
+    # data collections do not overwrite each other.
+    args.data_dir = resolve_data_dir(args.data_dir)
+    if args.output_dir is None:
+        args.output_dir = dataset_results_dir("evaluate_skill_class", data_dir=args.data_dir)
+    print(f"Data directory: {args.data_dir}")
+    print(f"Output directory: {args.output_dir}")
+
     valid_users = load_valid_users(args.data_dir)
+    bad_ids = load_bad_user_ids(args.data_dir, args.exclude_bad_users)
+    valid_users = {uid: pid for uid, pid in valid_users.items() if uid not in bad_ids}
     if not valid_users:
         print(f"No users with msgpack files found in {args.data_dir}")
         sys.exit(1)
@@ -803,11 +847,16 @@ def main():
         _plot_metric_by_class(
             class_names=class_names,
             values_by_class=experience_by_class,
-            y_label="Self-reported Overcooked experience (1–5)",
-            title="Self-reported experience by model-predicted skill class",
+            y_label="Participant Overcooked\nexperience (1–5)",
+            x_label="Skill class predicted by model",
+            title=None,
             output_path=os.path.join(output_dir, "experience_by_skill_class.png"),
             form="dot",
             ylim=(0.7, 5.3),
+            fontsize=18,
+            figsize=(5.5, 5),
+            point_size=30,
+            stack_label=True,
         )
         _plot_metric_by_class_per_layout(
             class_names=class_names,

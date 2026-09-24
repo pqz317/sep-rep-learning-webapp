@@ -29,3 +29,16 @@ OC_ORIGINAL_LAYOUT_NAMES: dict[str, str] = {
 }
 
 DISPLAY_ORDERING: list[str] = ["SP", "FCP", "MEP", "CoMeDi", "PACE", "CEC", "CECP"]
+
+DISPLAY_COLORS: dict[str, str] = {
+    "SP": "tab:purple",
+    "FCP": "tab:blue",
+    "MEP": "tab:orange",
+    "PACE": "tab:brown",
+    "CoMeDi": "tab:pink",
+    "CEC": "tab:green",
+    "CEC+LIPO": "tab:olive",
+    "CECP no pred": "tab:gray",
+    "CECP no pred + PACE": "tab:cyan",
+    "CECP": "tab:red",
+}

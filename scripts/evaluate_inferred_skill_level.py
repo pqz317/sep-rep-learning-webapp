@@ -41,23 +41,32 @@ from scipy.stats import pearsonr, linregress
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from analyze_data import load_valid_users, load_overcooked_experience, LIKERT_SCALE
+from analyze_data import add_exclude_bad_users_arg, load_bad_user_ids, load_valid_users, load_overcooked_experience
+from constants import (
+    ACTION_ARRAY,
+    DATA_DIR,
+    LIKERT_SCALE,
+    MODELS_DIR,
+    OBS_KEY,
+    REWARD_MATCH_TOL,
+    SEP_REP_RESULTS_DIR,
+    dataset_results_dir,
+    resolve_data_dir,
+)
 from coop_foraging_scripts.evaluation_utils import load_model_checkpoint, write_csv
+from human_slot import recorded_human_agent
 from nicewebrl.utils import read_all_records_sync
 from nicewebrl.nicejax import TimestepWrapper
 from web_app.constants import ORIGINAL_5_TAGS
 from web_app.experiment import create_environment
 
-DEFAULT_DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "newflydata")
-DEFAULT_MODELS_DIR = os.environ.get("MODELS_DIR", "/app/models")
-DEFAULT_OUTPUT_DIR = "./results/evaluate_inferred_skill_level"
-SKILL_AXIS_BASE_DIR = "/sep-rep-learning/results/evaluate_vib_latents/hksyr2i5"
-
-OBS_KEY = 'grid_2d'
-REWARD_MATCH_TOL = 0.5
-ACTION_ARRAY = [3, 1, 2, 0, 4, 5]
+DEFAULT_DATA_DIR = DATA_DIR
+DEFAULT_MODELS_DIR = MODELS_DIR
+DEFAULT_OUTPUT_DIR = None   # derived from the dataset in main()
+SKILL_AXIS_BASE_DIR = os.path.join(SEP_REP_RESULTS_DIR, "evaluate_vib_latents", "hksyr2i5")
 
 
 # ---------------------------------------------------------------------------
@@ -285,11 +294,13 @@ def replay_episode_for_skill(
         if "data" in r and "timestep" in r.get("data", {})
     ]
 
-    human_agent, is_ambiguous = _infer_human_agent(
-        filepath, records, template_ts, step_fn, model_fn, model_state
-    )
-    if is_ambiguous:
-        return None
+    human_agent = recorded_human_agent(records)
+    if human_agent is None:
+        human_agent, is_ambiguous = _infer_human_agent(
+            filepath, records, template_ts, step_fn, model_fn, model_state
+        )
+        if is_ambiguous:
+            return None
 
     model_agent_key = f"agent_{1 - human_agent}"
     ac = model_fn.actor_critic_fn
@@ -430,9 +441,11 @@ def main():
     )
     parser.add_argument("--tag", required=True,
                         help="Experiment tag, e.g. oc_cecp_pred_1000.")
-    parser.add_argument("--data-dir", default=DEFAULT_DATA_DIR)
+    parser.add_argument("--data-dir", default=DEFAULT_DATA_DIR,
+                        help="Dataset name ('resub', 'newflydata') or path to a data directory.")
     parser.add_argument("--models-dir", default=DEFAULT_MODELS_DIR)
-    parser.add_argument("--output-dir", default=DEFAULT_OUTPUT_DIR)
+    parser.add_argument("--output-dir", default=DEFAULT_OUTPUT_DIR,
+                        help="Override the default results/<name>/<dataset>/ output directory.")
     parser.add_argument("--latent-start-t", type=int, default=50,
                         help="Start of timestep window for averaging inferred skill (inclusive, default 50).")
     parser.add_argument("--latent-end-t", type=int, default=100,
@@ -441,9 +454,20 @@ def main():
                         help="Exclude episodes whose mean inferred skill exceeds this value (default 10). Pass 'inf' to disable.")
     parser.add_argument("--no-plots", action="store_true")
     parser.add_argument("--verbose", action="store_true")
+    add_exclude_bad_users_arg(parser)
     args = parser.parse_args()
 
+    # Resolve the dataset and namespace outputs by it, so runs on different
+    # data collections do not overwrite each other.
+    args.data_dir = resolve_data_dir(args.data_dir)
+    if args.output_dir is None:
+        args.output_dir = dataset_results_dir("evaluate_inferred_skill_level", data_dir=args.data_dir)
+    print(f"Data directory: {args.data_dir}")
+    print(f"Output directory: {args.output_dir}")
+
     valid_users = load_valid_users(args.data_dir)
+    bad_ids = load_bad_user_ids(args.data_dir, args.exclude_bad_users)
+    valid_users = {uid: pid for uid, pid in valid_users.items() if uid not in bad_ids}
     if not valid_users:
         print(f"No users with msgpack files found in {args.data_dir}")
         sys.exit(1)

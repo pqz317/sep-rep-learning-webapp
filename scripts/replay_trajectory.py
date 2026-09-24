@@ -24,16 +24,19 @@ import jax.numpy as jnp
 import numpy as np
 from flax import serialization
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
+from constants import DATA_DIR, MODELS_DIR, resolve_data_dir
 from coop_foraging_scripts.evaluation_utils import load_model_checkpoint
+from human_slot import recorded_human_agent
 from nicewebrl.utils import read_all_records_sync
 from nicewebrl.nicejax import TimestepWrapper
-from web_app.constants import ORIGINAL_5_TAGS
+from web_app.constants import HUMAN_AGENT_ID, ORIGINAL_5_TAGS
 from web_app.experiment import create_environment
 
-DEFAULT_DATA_DIR = os.environ.get("DATA_DIR", "data")
-DEFAULT_MODELS_DIR = os.environ.get("MODELS_DIR", "/app/models")
+DEFAULT_DATA_DIR = DATA_DIR
+DEFAULT_MODELS_DIR = MODELS_DIR
 
 
 def find_gameplay_files(user_id: str, tag: str, data_dir: str) -> list[str]:
@@ -97,6 +100,21 @@ def replay_file(
     parsed = parse_filename(filepath, tag)
     layout = parsed["layout"]
     agent_id = parsed["agent_id"]
+
+    records = list(read_all_records_sync(filepath))
+
+    if human_agent is None:
+        # Data collected since 2026-09-20 records the slot; older data does not, and
+        # recovering it needs a full two-hypothesis replay (see evaluate_skill_class.py),
+        # which this script does not do — fall back to the web app's fixed assignment.
+        human_agent = recorded_human_agent(records)
+        if human_agent is None:
+            human_agent = HUMAN_AGENT_ID
+            print(
+                f"  No human_id recorded in {os.path.basename(filepath)}; assuming "
+                f"human=agent {human_agent}. Pass --human-agent to override."
+            )
+
     model_agent = 1 - human_agent
     model_agent_key = f"agent_{model_agent}"
 
@@ -117,7 +135,6 @@ def replay_file(
 
     rnn_state = ac.init_rnn_state(jax.random.key(0), batch_size=1)
     template_ts = make_template_timestep(layout)
-    records = list(read_all_records_sync(filepath))
 
     actions = []
     action_names = []
@@ -199,19 +216,21 @@ def main():
     )
     parser.add_argument(
         "--data-dir", default=DEFAULT_DATA_DIR,
-        help=f"Directory containing gameplay files (default: {DEFAULT_DATA_DIR}).",
+        help=f"Dataset name ('resub', 'newflydata') or path to a data directory "
+             f"(default: {DEFAULT_DATA_DIR}).",
     )
     parser.add_argument(
         "--models-dir", default=DEFAULT_MODELS_DIR,
         help=f"Directory containing model checkpoints (default: {DEFAULT_MODELS_DIR}).",
     )
     parser.add_argument(
-        "--human-agent", type=int, default=0, choices=[0, 1],
+        "--human-agent", type=int, default=None, choices=[0, 1],
         help=(
-            "Which agent index (0 or 1) was the human player. "
-            "The model's obs is taken from the other agent. "
-            "Default: 0. Note: this was randomly assigned per session and "
-            "is not stored in the gameplay file — verify if it matters for your analysis."
+            "Which agent index (0 or 1) was the human player; the model's obs is "
+            "taken from the other agent. By default it is read from the gameplay "
+            "file's metadata['human_id']. Data collected before 2026-09-20 does not "
+            "store it (the slot was randomly assigned per session), and there this "
+            f"falls back to agent {HUMAN_AGENT_ID} — pass the flag if that matters."
         ),
     )
     parser.add_argument(
@@ -221,6 +240,7 @@ def main():
     parser.add_argument("--verbose", action="store_true")
     args = parser.parse_args()
 
+    args.data_dir = resolve_data_dir(args.data_dir)
     files = find_gameplay_files(args.user_id, args.tag, args.data_dir)
     if not files:
         print(
