@@ -49,8 +49,10 @@
 **/data
 **/flydata
 **/newflydata
+**/prolific_data
 **/notes
 **/figures
+**/results
 **/.nicegui
 **/.jax_cache
 fly.toml
