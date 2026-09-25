@@ -63,7 +63,7 @@ STAY_IDX = 4
 SHARE_COLS = [f"share_{i}" for i in range(N_KEYS)]
 
 # Flag an episode when one key makes up more than this share of its presses.
-DEFAULT_TOP_KEY_THRESHOLD = 0.45
+DEFAULT_TOP_KEY_THRESHOLD = 0.5
 
 # Colors (reference palette): one series, plus the reserved status color for flags.
 BAR_COLOR = "#2a78d6"
